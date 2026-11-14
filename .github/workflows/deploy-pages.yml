@@ -1,7 +1,11 @@
 name: Deploy to GitHub Pages
 
 # main 브랜치에 push 하면 자동으로 빌드해서 GitHub Pages 에 배포합니다.
-# 최초 1회: 저장소 → Settings → Pages → Source 를 "GitHub Actions" 로 선택하세요.
+# 이 저장소는 사용자 페이지(physhow9657-blip.github.io)이므로 BASE_PATH 는 '/' 입니다.
+#
+# 최초 배포: 저장소에 push 만 하면 됩니다. Pages 가 아직 꺼져 있으면
+# actions/configure-pages 의 enablement 옵션이 자동으로 켭니다.
+# (자동으로 켜지지 않는 환경이면 저장소 Settings → Pages → Source = GitHub Actions)
 
 on:
   push:
@@ -24,22 +28,33 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Build with Astro
-        uses: withastro/action@v3
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          # 프로젝트가 저장소 루트에 있으면 '.' (하위 폴더면 예: 'projects/car-adsense-blog')
-          path: .
           node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build (Astro)
+        run: npm run build
         env:
-          # 사용자 페이지(physhow9657-blip.github.io 저장소) → 루트 주소로 배포합니다.
+          # 사용자 페이지(루트 주소) 배포
           SITE_URL: https://${{ github.repository_owner }}.github.io
           BASE_PATH: /
-          # ─────────────────────────────────────────────────────────────
-          # 다른 저장소 이름으로 '프로젝트 페이지'에 배포한다면 아래처럼 바꾸세요.
-          #   BASE_PATH: /${{ github.event.repository.name }}
-          # 커스텀 도메인을 연결했다면 SITE_URL 만 실제 도메인으로 바꾸고
-          # BASE_PATH 는 '/' 로 두면 됩니다.
-          # ─────────────────────────────────────────────────────────────
+          # 프로젝트 페이지로 배포한다면 BASE_PATH: /${{ github.event.repository.name }}
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+        with:
+          # Pages 가 꺼져 있으면 이 단계에서 자동으로 켭니다.
+          enablement: true
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
 
   deploy:
     needs: build
