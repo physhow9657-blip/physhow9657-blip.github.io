@@ -91,7 +91,7 @@ export const config = {
    * showAffiliates: false 이면 AffiliateBox 가 사이트 어디에도 그려지지 않습니다.
    * 애드센스 승인 신청 기간에는 false, 승인 직후 true.
    * 각 항목의 url 이 비어 있으면 그 카드는 자동으로 숨겨집니다. */
-  showAffiliates: false,
+  showAffiliates: true,
 
   affiliates: {
     // 공정거래위원회 「추천·보증 등에 관한 표시·광고 심사지침」에 맞춘 대가성 문구.
