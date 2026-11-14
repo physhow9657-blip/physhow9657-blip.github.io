@@ -1,7 +1,8 @@
 # 카드뉴스 캡션 초안 — 렌트 손익분기 (5장)
 
 - 이미지: `insta-drafts/cards/rent-breakeven/01~05.png`
-- 연결 글: https://physhow9657-blip.github.io/posts/rent-vs-lease-vs-installment-3year/ (현재 draft — 발행 후 링크 사용)
+- 연결 글: https://physhow9657-blip.github.io/posts/rent-vs-lease-vs-installment-3year/ (글 공개됨)
+- 게시 상태: **재게시 완료**(2026-11-14). 밋밋한 v1(`rent-breakeven/`)은 삭제, 새 디자인 v2(`rent-breakeven-v2/`)로 교체. 캡션은 기존 그대로
 - 제휴 링크 없음 → 대가성 문구 불필요(제휴 링크를 넣게 되면 첫 2줄에 표시)
 
 ## 캡션

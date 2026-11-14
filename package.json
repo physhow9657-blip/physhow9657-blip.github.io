@@ -12,7 +12,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "test": "node --experimental-strip-types scripts/test-car-tax.mjs",
+    "test": "node --experimental-strip-types scripts/test-car-tax.mjs && node --experimental-strip-types scripts/test-car-finance.mjs",
     "astro": "astro"
   },
   "dependencies": {

@@ -1,0 +1,555 @@
+{
+  "version": 1,
+  "historyId": "14062f3a-916b-4ae4-a817-ba0fe342323e",
+  "currentRevision": "c687b23e-2686-4db7-8782-4fd352bb31b0",
+  "pendingChanges": false,
+  "files": {
+    "AGENTS.md": {
+      "hash": "268ff46777938da818baa92a718571785e9acf2cef2d3ffbacbb93483dcba37a",
+      "content": "/Users/danielsmacbook/.cache/hyperframes/history/14062f3a-916b-4ae4-a817-ba0fe342323e/blobs/26/268ff46777938da818baa92a718571785e9acf2cef2d3ffbacbb93483dcba37a"
+    },
+    "CLAUDE.md": {
+      "hash": "268ff46777938da818baa92a718571785e9acf2cef2d3ffbacbb93483dcba37a",
+      "content": "/Users/danielsmacbook/.cache/hyperframes/history/14062f3a-916b-4ae4-a817-ba0fe342323e/blobs/26/268ff46777938da818baa92a718571785e9acf2cef2d3ffbacbb93483dcba37a"
+    },
+    "compositions/s1.html": {
+      "hash": "836a4b15b42bcaaede72809c6ab4691590d862bca152435a4ccb16ccbf258745",
+      "content": "/Users/danielsmacbook/.cache/hyperframes/history/14062f3a-916b-4ae4-a817-ba0fe342323e/blobs/83/836a4b15b42bcaaede72809c6ab4691590d862bca152435a4ccb16ccbf258745"
+    },
+    "compositions/s2.html": {
+      "hash": "4c0468883043a500edbbc1b024465158e5dbcd42d5747031bd83fc90e1ed2228",
+      "content": "/Users/danielsmacbook/.cache/hyperframes/history/14062f3a-916b-4ae4-a817-ba0fe342323e/blobs/4c/4c0468883043a500edbbc1b024465158e5dbcd42d5747031bd83fc90e1ed2228"
+    },
+    "compositions/s3.html": {
+      "hash": "8529aa73fe4098652209dbc9132e7a5926d9598e4283f8336d0fa20003c92eff",
+      "content": "/Users/danielsmacbook/.cache/hyperframes/history/14062f3a-916b-4ae4-a817-ba0fe342323e/blobs/85/8529aa73fe4098652209dbc9132e7a5926d9598e4283f8336d0fa20003c92eff"
+    },
+    "compositions/s4.html": {
+      "hash": "24b34957bb85b0afa7fdc67abbc70febd57e987416eec330efe5ff12dd7bd821",
+      "content": "/Users/danielsmacbook/.cache/hyperframes/history/14062f3a-916b-4ae4-a817-ba0fe342323e/blobs/24/24b34957bb85b0afa7fdc67abbc70febd57e987416eec330efe5ff12dd7bd821"
+    },
+    "compositions/s5.html": {
+      "hash": "62190b90c9599933714b632c09cf3f5476e45a172a9745f866e385090eb976be",
+      "content": "/Users/danielsmacbook/.cache/hyperframes/history/14062f3a-916b-4ae4-a817-ba0fe342323e/blobs/62/62190b90c9599933714b632c09cf3f5476e45a172a9745f866e385090eb976be"
+    },
+    "hyperframes.json": {
+      "hash": "53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50",
+      "content": "/Users/danielsmacbook/.cache/hyperframes/history/14062f3a-916b-4ae4-a817-ba0fe342323e/blobs/53/53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50"
+    },
+    "index.html": {
+      "hash": "0eb987fc978323a05b405cb5775db1afdcdc1a96cc8ebe97bb3aff8e6d1a1879",
+      "content": "/Users/danielsmacbook/.cache/hyperframes/history/14062f3a-916b-4ae4-a817-ba0fe342323e/blobs/0e/0eb987fc978323a05b405cb5775db1afdcdc1a96cc8ebe97bb3aff8e6d1a1879"
+    },
+    "meta.json": {
+      "hash": "3655d42c9826330cb414d6444dbe88b2740b15234d2be3d8dcd003f6ae032433",
+      "content": "/Users/danielsmacbook/.cache/hyperframes/history/14062f3a-916b-4ae4-a817-ba0fe342323e/blobs/36/3655d42c9826330cb414d6444dbe88b2740b15234d2be3d8dcd003f6ae032433"
+    },
+    "package.json": {
+      "hash": "995820fecfc300502ee38a76845386e5bba80570a596c7514af7fa1bd443026e",
+      "content": "/Users/danielsmacbook/.cache/hyperframes/history/14062f3a-916b-4ae4-a817-ba0fe342323e/blobs/99/995820fecfc300502ee38a76845386e5bba80570a596c7514af7fa1bd443026e"
+    }
+  },
+  "revisions": {
+    "982e44f0-2a4c-4f6c-acdc-b30d2dfc02ea": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1794648641939,
+      "endedAt": 1794648641946,
+      "files": {
+        "compositions/s1.html": {
+          "before": "/Users/danielsmacbook/.cache/hyperframes/history/14062f3a-916b-4ae4-a817-ba0fe342323e/blobs/8f/8fe350cfc6b5d0ae750f9cd4007508039f52d98e19c4a1ab094a5b28d96377d9",
+          "after": "/Users/danielsmacbook/.cache/hyperframes/history/14062f3a-916b-4ae4-a817-ba0fe342323e/blobs/b7/b7ed4a0914910e33f5f35c8418d0f144fa9a2ed6e3ec6f97965438008cbe5606"
+        },
+        "compositions/s2.html": {
+          "before": "/Users/danielsmacbook/.cache/hyperframes/history/14062f3a-916b-4ae4-a817-ba0fe342323e/blobs/7c/7c3719e059918110da85f84ea538858f0d86f1139f967f3bab8c2b7a977624d0",
+          "after": "/Users/danielsmacbook/.cache/hyperframes/history/14062f3a-916b-4ae4-a817-ba0fe342323e/blobs/df/dfbf45d63ddcdccd516398b111cae8c6a75001da3dca5b89ccf6cf53a50e9e73"
+        },
+        "compositions/s3.html": {
+          "before": "/Users/danielsmacbook/.cache/hyperframes/history/14062f3a-916b-4ae4-a817-ba0fe342323e/blobs/03/03e12ffd19556d4c4cd1d3a9a7eb081510a9b019639acf5c14c18e10b21a1890",
+          "after": "/Users/danielsmacbook/.cache/hyperframes/history/14062f3a-916b-4ae4-a817-ba0fe342323e/blobs/3e/3ea986b8513392fff4fa7999b45008127332518ec8cdf9b196ff7c888dd743fa"
+        },
+        "compositions/s4.html": {
+          "before": "/Users/danielsmacbook/.cache/hyperframes/history/14062f3a-916b-4ae4-a817-ba0fe342323e/blobs/87/8766b8c2b3f6ca1da3895c9ebf78c0232000f3faa122954f58dddb91d3c6812c",
+          "after": "/Users/danielsmacbook/.cache/hyperframes/history/14062f3a-916b-4ae4-a817-ba0fe342323e/blobs/e9/e94013f67c6cb36a4a8c10de8cfb0011ae8b613e3b5c87a05030d8ab5844e4f9"
+        },
+        "compositions/s5.html": {
+          "before": "/Users/danielsmacbook/.cache/hyperframes/history/14062f3a-916b-4ae4-a817-ba0fe342323e/blobs/02/02e9ea9287ae48ca961266aeca457423adca14aa262eb7b79b41d43c6ae4fcea",
+          "after": "/Users/danielsmacbook/.cache/hyperframes/history/14062f3a-916b-4ae4-a817-ba0fe342323e/blobs/af/af229397ae2e8a2fd3747cc46fb9a0792c51121e38f1e4dd55d6796650be8f6d"
+        }
+      }
+    },
+    "3c7c1b9f-b62e-40be-9f02-cbb2751a4854": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1794648662724,
+      "endedAt": 1794648662729,
+      "files": {
+        "compositions/s2.html": {
+          "before": "/Users/danielsmacbook/.cache/hyperframes/history/14062f3a-916b-4ae4-a817-ba0fe342323e/blobs/df/dfbf45d63ddcdccd516398b111cae8c6a75001da3dca5b89ccf6cf53a50e9e73",
+          "after": "/Users/danielsmacbook/.cache/hyperframes/history/14062f3a-916b-4ae4-a817-ba0fe342323e/blobs/4c/4c0468883043a500edbbc1b024465158e5dbcd42d5747031bd83fc90e1ed2228"
+        },
+        "compositions/s3.html": {
+          "before": "/Users/danielsmacbook/.cache/hyperframes/history/14062f3a-916b-4ae4-a817-ba0fe342323e/blobs/3e/3ea986b8513392fff4fa7999b45008127332518ec8cdf9b196ff7c888dd743fa",
+          "after": "/Users/danielsmacbook/.cache/hyperframes/history/14062f3a-916b-4ae4-a817-ba0fe342323e/blobs/85/8529aa73fe4098652209dbc9132e7a5926d9598e4283f8336d0fa20003c92eff"
+        },
+        "compositions/s4.html": {
+          "before": "/Users/danielsmacbook/.cache/hyperframes/history/14062f3a-916b-4ae4-a817-ba0fe342323e/blobs/e9/e94013f67c6cb36a4a8c10de8cfb0011ae8b613e3b5c87a05030d8ab5844e4f9",
+          "after": "/Users/danielsmacbook/.cache/hyperframes/history/14062f3a-916b-4ae4-a817-ba0fe342323e/blobs/24/24b34957bb85b0afa7fdc67abbc70febd57e987416eec330efe5ff12dd7bd821"
+        },
+        "compositions/s5.html": {
+          "before": "/Users/danielsmacbook/.cache/hyperframes/history/14062f3a-916b-4ae4-a817-ba0fe342323e/blobs/af/af229397ae2e8a2fd3747cc46fb9a0792c51121e38f1e4dd55d6796650be8f6d",
+          "after": "/Users/danielsmacbook/.cache/hyperframes/history/14062f3a-916b-4ae4-a817-ba0fe342323e/blobs/62/62190b90c9599933714b632c09cf3f5476e45a172a9745f866e385090eb976be"
+        }
+      }
+    },
+    "87a46923-212e-43c0-ac1f-b4e7f1961935": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1794648711017,
+      "endedAt": 1794648711018,
+      "files": {
+        "compositions/s1.html": {
+          "before": "/Users/danielsmacbook/.cache/hyperframes/history/14062f3a-916b-4ae4-a817-ba0fe342323e/blobs/b7/b7ed4a0914910e33f5f35c8418d0f144fa9a2ed6e3ec6f97965438008cbe5606",
+          "after": "/Users/danielsmacbook/.cache/hyperframes/history/14062f3a-916b-4ae4-a817-ba0fe342323e/blobs/e4/e46021092f7e0e33751dc1cd0c9a5704ea7ee2d7692181123d7d09eda0286e29"
+        }
+      }
+    },
+    "c687b23e-2686-4db7-8782-4fd352bb31b0": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1794648911027,
+      "endedAt": 1794648911028,
+      "files": {
+        "compositions/s1.html": {
+          "before": "/Users/danielsmacbook/.cache/hyperframes/history/14062f3a-916b-4ae4-a817-ba0fe342323e/blobs/e4/e46021092f7e0e33751dc1cd0c9a5704ea7ee2d7692181123d7d09eda0286e29",
+          "after": "/Users/danielsmacbook/.cache/hyperframes/history/14062f3a-916b-4ae4-a817-ba0fe342323e/blobs/83/836a4b15b42bcaaede72809c6ab4691590d862bca152435a4ccb16ccbf258745"
+        }
+      }
+    }
+  },
+  "checks": {
+    "latest": {
+      "revision": "c687b23e-2686-4db7-8782-4fd352bb31b0",
+      "id": "eb47a5b8-fb19-491c-a562-a4063e63fb3d"
+    },
+    "revisions": {
+      "982e44f0-2a4c-4f6c-acdc-b30d2dfc02ea": [
+        {
+          "id": "5f011380-0872-4cee-bdbc-fff0712f42f6",
+          "scope": "project",
+          "report": "/Users/danielsmacbook/physhow9657-blip.github.io/insta-drafts/reels/installment/.hyperframes/artifacts/checks/5f011380-0872-4cee-bdbc-fff0712f42f6.json",
+          "metadata": {
+            "ok": false,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 45000,
+              "cache": true,
+              "contrast": true,
+              "craft": true,
+              "strict": false,
+              "snapshots": false,
+              "safeZones": [
+                "tiktok",
+                "reels",
+                "shorts"
+              ],
+              "browserGpuMode": "auto",
+              "includeUnmounted": false
+            }
+          },
+          "createdAt": 1794648644224,
+          "contentHash": "d8d85860972029f1fd198bfad01ca9800dc61cd13c849c1f24d52bece1142ef3",
+          "revision": "982e44f0-2a4c-4f6c-acdc-b30d2dfc02ea",
+          "inputFingerprint": "eb48173fbf7ea76b7296b181da78fd7e3b38196c64e8c00ce231f2a69b65580e",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ],
+      "3c7c1b9f-b62e-40be-9f02-cbb2751a4854": [
+        {
+          "id": "690348f0-92d2-44fb-9b46-f94621ba5fac",
+          "scope": "project",
+          "report": "/Users/danielsmacbook/physhow9657-blip.github.io/insta-drafts/reels/installment/.hyperframes/artifacts/checks/690348f0-92d2-44fb-9b46-f94621ba5fac.json",
+          "metadata": {
+            "ok": true,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 45000,
+              "cache": true,
+              "contrast": true,
+              "craft": true,
+              "strict": false,
+              "snapshots": false,
+              "safeZones": [
+                "tiktok",
+                "reels",
+                "shorts"
+              ],
+              "browserGpuMode": "auto",
+              "includeUnmounted": false
+            }
+          },
+          "createdAt": 1794648664999,
+          "contentHash": "d7fecdf4029e0a85fc50972d5590e52e9b0102e8143cb241f03e9898993252e8",
+          "revision": "3c7c1b9f-b62e-40be-9f02-cbb2751a4854",
+          "inputFingerprint": "829263df90c51ba0027d7f5dde2792a1e110d28e0d437ebb561876e30cb35c6b",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ],
+      "c687b23e-2686-4db7-8782-4fd352bb31b0": [
+        {
+          "id": "eb47a5b8-fb19-491c-a562-a4063e63fb3d",
+          "scope": "project",
+          "report": "/Users/danielsmacbook/physhow9657-blip.github.io/insta-drafts/reels/installment/.hyperframes/artifacts/checks/eb47a5b8-fb19-491c-a562-a4063e63fb3d.json",
+          "metadata": {
+            "ok": true,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 45000,
+              "cache": true,
+              "contrast": true,
+              "craft": true,
+              "strict": false,
+              "snapshots": false,
+              "safeZones": [
+                "tiktok",
+                "reels",
+                "shorts"
+              ],
+              "browserGpuMode": "auto",
+              "includeUnmounted": false
+            }
+          },
+          "createdAt": 1794648913255,
+          "contentHash": "4454255aefe38c5865fe4f9975d95f2c8baaf13eb0e636a13ebe429b82ea2937",
+          "revision": "c687b23e-2686-4db7-8782-4fd352bb31b0",
+          "inputFingerprint": "f64f96a140702047c7bbf9cd4cb28ce2c43bed098972486d896e7907c37da9f7",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ]
+    },
+    "unversioned": [
+      {
+        "id": "3db07e66-2b3c-4e14-b2e0-370770599b95",
+        "scope": "project",
+        "report": "/Users/danielsmacbook/physhow9657-blip.github.io/insta-drafts/reels/installment/.hyperframes/artifacts/checks/3db07e66-2b3c-4e14-b2e0-370770599b95.json",
+        "metadata": {
+          "ok": false,
+          "browserSkipped": false,
+          "options": {
+            "samples": 9,
+            "atTransitions": false,
+            "maxIssues": 80,
+            "collapseStatic": true,
+            "tolerance": 2,
+            "timeout": 45000,
+            "cache": true,
+            "contrast": true,
+            "craft": true,
+            "strict": false,
+            "snapshots": false,
+            "safeZones": [
+              "tiktok",
+              "reels",
+              "shorts"
+            ],
+            "browserGpuMode": "auto",
+            "includeUnmounted": false
+          }
+        },
+        "createdAt": 1794648616758,
+        "contentHash": "23cd90e92bea2bfdad1afed3609023fbf683bb828f58895c4a7d14949cab5751",
+        "revision": null,
+        "inputFingerprint": "97a369f754d23d38256be133ce36601544170fc04b053486f1240ff4e056a4a0",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      }
+    ]
+  },
+  "snapshots": {
+    "latest": {
+      "revision": "c687b23e-2686-4db7-8782-4fd352bb31b0",
+      "id": "4b8dfe09-072f-4f17-a65e-02d255925b77-1"
+    },
+    "revisions": {
+      "3c7c1b9f-b62e-40be-9f02-cbb2751a4854": [
+        {
+          "scope": "full",
+          "id": "32cb3b28-e5d0-492f-b4ff-1e78b9b43e81-0",
+          "image": "/Users/danielsmacbook/physhow9657-blip.github.io/insta-drafts/reels/installment/.hyperframes/artifacts/snapshots/a5033439-a2f1-47d6-8d71-f0c9bfb27d06/frame-00-at-0.2s.png",
+          "time": 0.2,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [
+              "Fonts failed: ASD (100 900 normal)"
+            ],
+            "partial": true
+          },
+          "createdAt": 1794648668825,
+          "contentHash": "2010c95d265a2a816bcab7cc5b156cf6ee85403c43f2289899121b8ca5063b33",
+          "revision": "3c7c1b9f-b62e-40be-9f02-cbb2751a4854",
+          "inputFingerprint": "829263df90c51ba0027d7f5dde2792a1e110d28e0d437ebb561876e30cb35c6b",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "32cb3b28-e5d0-492f-b4ff-1e78b9b43e81-1",
+          "image": "/Users/danielsmacbook/physhow9657-blip.github.io/insta-drafts/reels/installment/.hyperframes/artifacts/snapshots/a5033439-a2f1-47d6-8d71-f0c9bfb27d06/frame-01-at-5s.png",
+          "time": 5,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [
+              "Fonts failed: ASD (100 900 normal)"
+            ],
+            "partial": true
+          },
+          "createdAt": 1794648668825,
+          "contentHash": "ea66205953fba86d04f80c2926f4c5689a865478f78da73cab9677bdeb27a208",
+          "revision": "3c7c1b9f-b62e-40be-9f02-cbb2751a4854",
+          "inputFingerprint": "829263df90c51ba0027d7f5dde2792a1e110d28e0d437ebb561876e30cb35c6b",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "32cb3b28-e5d0-492f-b4ff-1e78b9b43e81-2",
+          "image": "/Users/danielsmacbook/physhow9657-blip.github.io/insta-drafts/reels/installment/.hyperframes/artifacts/snapshots/a5033439-a2f1-47d6-8d71-f0c9bfb27d06/frame-02-at-8s.png",
+          "time": 8,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [
+              "Fonts failed: ASD (100 900 normal)"
+            ],
+            "partial": true
+          },
+          "createdAt": 1794648668825,
+          "contentHash": "93da3651f94dc967902725ccca8210d7c93badb5046b56c317c8e972d5d4acda",
+          "revision": "3c7c1b9f-b62e-40be-9f02-cbb2751a4854",
+          "inputFingerprint": "829263df90c51ba0027d7f5dde2792a1e110d28e0d437ebb561876e30cb35c6b",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "32cb3b28-e5d0-492f-b4ff-1e78b9b43e81-3",
+          "image": "/Users/danielsmacbook/physhow9657-blip.github.io/insta-drafts/reels/installment/.hyperframes/artifacts/snapshots/a5033439-a2f1-47d6-8d71-f0c9bfb27d06/frame-03-at-12s.png",
+          "time": 12,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [
+              "Fonts failed: ASD (100 900 normal)"
+            ],
+            "partial": true
+          },
+          "createdAt": 1794648668825,
+          "contentHash": "bf41c78d9218efb9681ef8db8f5a02e60bb36689f95a5c87da5e922364622bef",
+          "revision": "3c7c1b9f-b62e-40be-9f02-cbb2751a4854",
+          "inputFingerprint": "829263df90c51ba0027d7f5dde2792a1e110d28e0d437ebb561876e30cb35c6b",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "32cb3b28-e5d0-492f-b4ff-1e78b9b43e81-4",
+          "image": "/Users/danielsmacbook/physhow9657-blip.github.io/insta-drafts/reels/installment/.hyperframes/artifacts/snapshots/a5033439-a2f1-47d6-8d71-f0c9bfb27d06/frame-04-at-17s.png",
+          "time": 17,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [
+              "Fonts failed: ASD (100 900 normal)"
+            ],
+            "partial": true
+          },
+          "createdAt": 1794648668825,
+          "contentHash": "ca902aea9ec032bbb4c53b412f819d698a2511fabcfb198914b30fbbe3dd3c65",
+          "revision": "3c7c1b9f-b62e-40be-9f02-cbb2751a4854",
+          "inputFingerprint": "829263df90c51ba0027d7f5dde2792a1e110d28e0d437ebb561876e30cb35c6b",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "32cb3b28-e5d0-492f-b4ff-1e78b9b43e81-5",
+          "image": "/Users/danielsmacbook/physhow9657-blip.github.io/insta-drafts/reels/installment/.hyperframes/artifacts/snapshots/a5033439-a2f1-47d6-8d71-f0c9bfb27d06/frame-05-at-22s.png",
+          "time": 22,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [
+              "Fonts failed: ASD (100 900 normal)"
+            ],
+            "partial": true
+          },
+          "createdAt": 1794648668825,
+          "contentHash": "28893020857d918263794f840111997e868e3c501f632f5eb0f883639c58951b",
+          "revision": "3c7c1b9f-b62e-40be-9f02-cbb2751a4854",
+          "inputFingerprint": "829263df90c51ba0027d7f5dde2792a1e110d28e0d437ebb561876e30cb35c6b",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "32cb3b28-e5d0-492f-b4ff-1e78b9b43e81-6",
+          "image": "/Users/danielsmacbook/physhow9657-blip.github.io/insta-drafts/reels/installment/.hyperframes/artifacts/snapshots/a5033439-a2f1-47d6-8d71-f0c9bfb27d06/frame-06-at-25.75s.png",
+          "time": 25.75,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [
+              "Fonts failed: ASD (100 900 normal)"
+            ],
+            "partial": true
+          },
+          "createdAt": 1794648668825,
+          "contentHash": "3ad61747462c3210ecc1f16707f0bb6f9b3cff284dac1742c54fb1dc30036ec3",
+          "revision": "3c7c1b9f-b62e-40be-9f02-cbb2751a4854",
+          "inputFingerprint": "829263df90c51ba0027d7f5dde2792a1e110d28e0d437ebb561876e30cb35c6b",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ],
+      "87a46923-212e-43c0-ac1f-b4e7f1961935": [
+        {
+          "scope": "full",
+          "id": "eb5193d3-7b68-48d3-adc1-8d798d161348-0",
+          "image": "/Users/danielsmacbook/physhow9657-blip.github.io/insta-drafts/reels/installment/.hyperframes/artifacts/snapshots/c3fea231-3c1c-45aa-ac47-23db2d3f0556/frame-00-at-0.1s.png",
+          "time": 0.1,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [
+              "Fonts failed: ASD (100 900 normal)"
+            ],
+            "partial": true
+          },
+          "createdAt": 1794648712761,
+          "contentHash": "7e31a37d71273602217caaf53eed50616f14ed6f2f588c65895e2ac77138d7f4",
+          "revision": "87a46923-212e-43c0-ac1f-b4e7f1961935",
+          "inputFingerprint": "458091f4cf77083bb67475ef725c4210d7ad20723f83bf779b1a84e04b445a7d",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "eb5193d3-7b68-48d3-adc1-8d798d161348-1",
+          "image": "/Users/danielsmacbook/physhow9657-blip.github.io/insta-drafts/reels/installment/.hyperframes/artifacts/snapshots/c3fea231-3c1c-45aa-ac47-23db2d3f0556/frame-01-at-25.75s.png",
+          "time": 25.75,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [
+              "Fonts failed: ASD (100 900 normal)"
+            ],
+            "partial": true
+          },
+          "createdAt": 1794648712761,
+          "contentHash": "3ad61747462c3210ecc1f16707f0bb6f9b3cff284dac1742c54fb1dc30036ec3",
+          "revision": "87a46923-212e-43c0-ac1f-b4e7f1961935",
+          "inputFingerprint": "458091f4cf77083bb67475ef725c4210d7ad20723f83bf779b1a84e04b445a7d",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ],
+      "c687b23e-2686-4db7-8782-4fd352bb31b0": [
+        {
+          "scope": "full",
+          "id": "4b8dfe09-072f-4f17-a65e-02d255925b77-0",
+          "image": "/Users/danielsmacbook/physhow9657-blip.github.io/insta-drafts/reels/installment/.hyperframes/artifacts/snapshots/46bef60f-c66d-4c91-b23e-4c3dc01b5f99/frame-00-at-1.5s.png",
+          "time": 1.5,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [
+              "Fonts failed: ASD (100 900 normal)"
+            ],
+            "partial": true
+          },
+          "createdAt": 1794648916272,
+          "contentHash": "234ba00a727864d690619cb89482e7a9ef9c3aa0981d50719d864e44748c64bb",
+          "revision": "c687b23e-2686-4db7-8782-4fd352bb31b0",
+          "inputFingerprint": "f64f96a140702047c7bbf9cd4cb28ce2c43bed098972486d896e7907c37da9f7",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "4b8dfe09-072f-4f17-a65e-02d255925b77-1",
+          "image": "/Users/danielsmacbook/physhow9657-blip.github.io/insta-drafts/reels/installment/.hyperframes/artifacts/snapshots/46bef60f-c66d-4c91-b23e-4c3dc01b5f99/frame-01-at-25.75s.png",
+          "time": 25.75,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [
+              "Fonts failed: ASD (100 900 normal)"
+            ],
+            "partial": true
+          },
+          "createdAt": 1794648916272,
+          "contentHash": "3ad61747462c3210ecc1f16707f0bb6f9b3cff284dac1742c54fb1dc30036ec3",
+          "revision": "c687b23e-2686-4db7-8782-4fd352bb31b0",
+          "inputFingerprint": "f64f96a140702047c7bbf9cd4cb28ce2c43bed098972486d896e7907c37da9f7",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ]
+    },
+    "unversioned": []
+  }
+}

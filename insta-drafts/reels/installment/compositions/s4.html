@@ -1,0 +1,17 @@
+<template>
+<style>@font-face{font-family:'ASD';src:local('Apple SD Gothic Neo');font-weight:100 900}#root{position:absolute;inset:0;background:#0B1B33;font-family:'ASD',sans-serif;color:#fff;overflow:hidden}
+.t{position:absolute;left:110px;right:110px;font-weight:900;letter-spacing:-3px;line-height:1.15}
+.y{display:inline-block;background:#FFD400;color:#0B1B33;border-radius:18px;padding:4px 26px}
+.sub{font-weight:700;color:#C9D6E8;line-height:1.45}
+.brand{position:absolute;left:110px;top:190px;font-size:34px;font-weight:800;color:#7FD6B0}</style>
+<div id="root" data-composition-id="s4" data-width="1080" data-height="1920">
+<div class="t" style="top:300px;font-size:100px">금리 8% → 18%<br>같은 60개월인데</div><div id="s4-n" class="t" style="top:640px;font-size:200px;white-space:nowrap;color:#FFD400;letter-spacing:-7px">+0만원</div><div id="s4-s" class="t sub" style="top:980px;font-size:54px;letter-spacing:-1px">총이자 433만원 → 1,047만원<br>금리 10%p 차이가 2배 넘게</div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+const o={n:0};
+tl.to(o,{n:614,duration:1.1,ease:'power3.out',onUpdate:()=>{document.getElementById('s4-n').textContent='+'+Math.round(o.n)+'만원'}},0.4);
+tl.fromTo('#s4-s',{opacity:0,y:30},{opacity:1,y:0,duration:0.3,ease:'power3.out'},1.8);
+window.__timelines["s4"] = tl;
+</script>
+</template>

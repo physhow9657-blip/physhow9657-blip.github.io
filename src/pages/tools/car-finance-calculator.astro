@@ -1,0 +1,237 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import { config } from '../../config';
+import { withBase } from '../../lib/url';
+import { calculateCarFinance } from '../../lib/car-finance';
+
+// 기본값(글 /posts/rent-vs-lease-vs-installment-3year/ 의 가정)으로 서버에서 한 번 계산해 둡니다.
+const defaults = {
+  price: 40000000, down: 0, annualRate: 6.5, months: 36, residualPct: 55,
+  registration: 3000000, insuranceYear: 1000000, taxYear: 519480, maintenanceYear: 200000,
+  rentMonthly: 0, rentIncludesRunning: true,
+};
+const init = calculateCarFinance(defaults);
+const krwFmt = new Intl.NumberFormat('ko-KR');
+const won = (n: number) => `${krwFmt.format(Math.round(n))}원`;
+
+const siteUrl = (Astro.site ?? new URL(config.url)).toString().replace(/\/+$/, '');
+const appLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  name: '자동차 할부 vs 렌트 총비용 계산기',
+  applicationCategory: 'FinanceApplication',
+  operatingSystem: 'Web',
+  inLanguage: 'ko-KR',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'KRW' },
+  url: `${siteUrl}${withBase('/tools/car-finance-calculator/')}`,
+};
+---
+
+<BaseLayout
+  title="자동차 할부 vs 렌트 총비용 계산기 — 월 얼마면 렌트가 유리할까"
+  description="차량가·금리·기간·잔존가치를 넣으면 할부 총 지출, 이자, 잔존가치 반영 실질 월 비용과 렌트·리스가 유리해지는 월 납입금 기준선을 바로 계산합니다. 입력값은 브라우저 밖으로 나가지 않습니다."
+  jsonLd={appLd}
+>
+  <header class="page-head">
+    <div class="container">
+      <p class="breadcrumb" style="margin-bottom:0.5rem;"><a href={withBase('/')}>홈</a> / 계산기</p>
+      <h1>자동차 할부 vs 렌트·리스 총비용 계산기</h1>
+      <p>
+        할부 실질 비용(잔존가치 차감)을 월 단위로 바꿔, <strong>렌트·리스 견적이 얼마 이하일 때 이득인지</strong> 기준선을 보여 드립니다.
+        모든 값은 직접 넣는 가정입니다.
+      </p>
+    </div>
+  </header>
+
+  <div class="container section">
+    <AdSlot slot="top" />
+
+    <form class="calc" id="fin-calc" autocomplete="off" novalidate>
+      <fieldset>
+        <legend>1. 차량·할부 조건</legend>
+        <div class="row row--2">
+          <div>
+            <label for="price">차량가 (원)</label>
+            <input type="text" id="price" inputmode="numeric" data-money value="40,000,000" />
+          </div>
+          <div>
+            <label for="down">선수금 (원)</label>
+            <input type="text" id="down" inputmode="numeric" data-money value="0" />
+            <p class="hint">차량가에서 먼저 내는 돈. 할부 원금이 줄어듭니다.</p>
+          </div>
+        </div>
+        <div class="row row--2" style="margin-top:0.9rem;">
+          <div>
+            <label for="rate">연 금리 (%)</label>
+            <input type="number" id="rate" min="0" max="100" step="0.1" inputmode="decimal" value="6.5" />
+          </div>
+          <div>
+            <label for="months">기간 (개월, 보유 기간과 같다고 가정)</label>
+            <input type="number" id="months" min="1" max="120" step="1" inputmode="numeric" value="36" />
+          </div>
+        </div>
+        <div class="row row--2" style="margin-top:0.9rem;">
+          <div>
+            <label for="residual">기간 종료 시 잔존가치율 (%)</label>
+            <input type="number" id="residual" min="0" max="100" step="1" inputmode="decimal" value="55" />
+            <p class="hint">3년 뒤 팔 때 받을 금액 ÷ 차량가. 시세가 아니라 가정입니다.</p>
+          </div>
+          <div>
+            <label for="reg">취득세 등 등록비용 (원)</label>
+            <input type="text" id="reg" inputmode="numeric" data-money value="3,000,000" />
+            <p class="hint"><a href={withBase(config.tools.carTaxCalculator)}>취등록세 계산기</a>로 확인할 수 있습니다.</p>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>2. 유지비 가정 (연 기준)</legend>
+        <div class="row row--2">
+          <div>
+            <label for="ins">연 보험료 (원)</label>
+            <input type="text" id="ins" inputmode="numeric" data-money value="1,000,000" />
+          </div>
+          <div>
+            <label for="tax">연 자동차세 (원)</label>
+            <input type="text" id="tax" inputmode="numeric" data-money value="519,480" />
+            <p class="hint">1,998cc 기준 519,480원.</p>
+          </div>
+        </div>
+        <div style="margin-top:0.9rem;">
+          <label for="mnt">연 정비·소모품 (원)</label>
+          <input type="text" id="mnt" inputmode="numeric" data-money value="200,000" />
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>3. 렌트·리스 견적 (선택)</legend>
+        <div class="row row--2">
+          <div>
+            <label for="rent">월 납입금 (원)</label>
+            <input type="text" id="rent" inputmode="numeric" data-money value="" placeholder="견적 금액, 비우면 비교 생략" />
+          </div>
+          <div>
+            <label for="incl">보험·세금·정비 포함 여부</label>
+            <select id="incl">
+              <option value="1">월 납입금에 포함</option>
+              <option value="0">별도 부담 (할부와 같은 유지비 가산)</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+
+      <p class="hint" id="errors" role="alert" style="color:#b42318;font-weight:600;"></p>
+
+      <div class="result" id="result" aria-live="polite">
+        <div class="result__total">
+          <span>실질 월 비용 (잔존가치 차감)</span>
+          <strong id="netMonthly">{won(init.netMonthly)}</strong>
+        </div>
+        <table>
+          <tbody id="rows">
+            <tr><th scope="row">월 상환액</th><td>{won(init.monthlyPayment)}</td></tr>
+            <tr><th scope="row">이자 총액</th><td>{won(init.totalInterest)}</td></tr>
+            <tr><th scope="row">할부 총 지출 (선수금·등록·유지비 포함)</th><td>{won(init.totalSpend)}</td></tr>
+            <tr><th scope="row">기간 종료 시 잔존가치</th><td>−{won(init.residualValue)}</td></tr>
+            <tr><th scope="row">실질 총비용</th><td>{won(init.netCost)}</td></tr>
+            <tr><th scope="row">렌트·리스 총비용</th><td id="rentTotal">견적을 입력하면 표시됩니다</td></tr>
+            <tr><th scope="row">렌트·리스 − 할부 실질 (양수면 할부 유리)</th><td id="diff">-</td></tr>
+          </tbody>
+          <tfoot>
+            <tr><th scope="row">렌트가 이득인 월 납입금 기준선</th><td id="breakeven">{won(init.breakEvenMonthly)} 이하</td></tr>
+          </tfoot>
+        </table>
+        <noscript><p class="hint">자바스크립트를 켜면 값을 바꿔 직접 계산할 수 있습니다. 위 숫자는 기본 가정 결과입니다.</p></noscript>
+      </div>
+
+      <div class="calc__actions">
+        <button type="button" class="btn btn--sm" id="reset">초기화</button>
+      </div>
+
+      <div class="calc__notes">
+        <strong>계산식</strong> — 월 상환액 = P·r ÷ (1 − (1+r)<sup>−n</sup>) (P: 차량가 − 선수금, r: 연 금리 ÷ 12, n: 개월 수, 원리금균등).
+        이자 총액 = 월 상환액 × n − P. 할부 총 지출 = 선수금 + 월 상환액 × n + 등록비용 + (연 보험·세금·정비 × n ÷ 12).
+        실질 총비용 = 총 지출 − 차량가 × 잔존가치율. 기준선 = 실질 총비용 ÷ n (렌트·리스에 유지비가 빠져 있으면 유지비를 뺀 값).
+        수수료·중도상환·보증금 이자·세금 공제는 반영하지 않았습니다.
+      </div>
+    </form>
+
+    <AdSlot slot="mid" />
+
+    <section style="margin-top:2rem;">
+      <h2 style="font-size:var(--step-2);">이어서 읽으면 좋은 글</h2>
+      <ul style="list-style:none;padding:0;margin:0.8rem 0 0;display:grid;gap:0.5rem;">
+        <li><a href={withBase('/posts/rent-vs-lease-vs-installment-3year/')} style="font-weight:600;">장기렌트 vs 리스 vs 할부 3년 총비용 비교</a></li>
+        <li><a href={withBase('/posts/used-car-installment-interest-calc/')} style="font-weight:600;">중고차 할부 이자 계산</a></li>
+        <li><a href={withBase('/posts/car-depreciation-3year-calc/')} style="font-weight:600;">자동차 3년 감가 계산</a></li>
+        <li><a href={withBase(config.tools.carTaxCalculator)} style="font-weight:600;">중고차 취등록세 계산기</a></li>
+      </ul>
+    </section>
+
+    <p class="hint" style="margin-top:1.5rem;">
+      이 계산기는 입력하신 가정값으로 계산한 모의 결과이며 실제 견적, 세무·금융 자문이 아닙니다.
+      금리·잔존가치·렌트 월 납입금은 차종과 신용, 계약 조건에 따라 달라지므로 계약 전 서면 견적과 약관으로 확인하세요.
+      입력값은 서버로 전송되거나 저장되지 않고 이 브라우저 안에서만 계산됩니다.
+    </p>
+
+    <AdSlot slot="bottom" />
+  </div>
+</BaseLayout>
+
+<script>
+  import { calculateCarFinance, validate } from '../../lib/car-finance';
+
+  const krw = new Intl.NumberFormat('ko-KR');
+  const el = (id) => document.getElementById(id);
+  const won = (n) => `${krw.format(Math.round(n))}원`;
+  // 빈칸은 0, 숫자 외 문자는 NaN 으로 만들어 validate 가 걸러내게 한다
+  const num = (id) => {
+    const raw = String(el(id).value).replace(/,/g, '').trim();
+    return raw === '' ? 0 : Number(raw);
+  };
+  const defaults = {
+    price: '40,000,000', down: '0', rate: '6.5', months: '36', residual: '55',
+    reg: '3,000,000', ins: '1,000,000', tax: '519,480', mnt: '200,000', rent: '', incl: '1',
+  };
+
+  function render() {
+    const input = {
+      price: num('price'), down: num('down'), annualRate: num('rate'), months: num('months'),
+      residualPct: num('residual'), registration: num('reg'), insuranceYear: num('ins'),
+      taxYear: num('tax'), maintenanceYear: num('mnt'), rentMonthly: num('rent'),
+      rentIncludesRunning: el('incl').value === '1',
+    };
+    const errs = validate(input);
+    el('errors').textContent = errs.join(' ');
+    if (errs.length) return; // 오류가 있으면 마지막 정상 결과를 그대로 둔다
+    const r = calculateCarFinance(input);
+    el('netMonthly').textContent = won(r.netMonthly);
+    el('rows').innerHTML = [
+      ['월 상환액', won(r.monthlyPayment)],
+      ['이자 총액', won(r.totalInterest)],
+      ['할부 총 지출 (선수금·등록·유지비 포함)', won(r.totalSpend)],
+      ['기간 종료 시 잔존가치', `−${won(r.residualValue)}`],
+      ['실질 총비용', won(r.netCost)],
+      ['렌트·리스 총비용', r.rentTotal === null ? '견적을 입력하면 표시됩니다' : won(r.rentTotal)],
+      [
+        '렌트·리스 − 할부 실질 (양수면 할부 유리)',
+        r.diff === null ? '-' : `${r.diff > 0 ? '+' : r.diff < 0 ? '−' : ''}${won(Math.abs(r.diff))}`,
+      ],
+    ].map(([k, v]) => `<tr><th scope="row">${k}</th><td>${v}</td></tr>`).join('');
+    el('breakeven').textContent = `${won(Math.max(0, r.breakEvenMonthly))} 이하`;
+  }
+
+  document.querySelectorAll('[data-money]').forEach((input) => {
+    input.addEventListener('input', () => {
+      const digits = input.value.replace(/[^0-9]/g, '');
+      input.value = digits === '' ? '' : krw.format(Number(digits));
+    });
+  });
+  el('fin-calc').addEventListener('input', render);
+  el('fin-calc').addEventListener('change', render);
+  el('reset').addEventListener('click', () => {
+    Object.entries(defaults).forEach(([id, v]) => (el(id).value = v));
+    render();
+  });
+</script>

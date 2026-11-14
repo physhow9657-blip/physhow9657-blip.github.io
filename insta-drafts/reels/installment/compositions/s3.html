@@ -1,0 +1,17 @@
+<template>
+<style>@font-face{font-family:'ASD';src:local('Apple SD Gothic Neo');font-weight:100 900}#root{position:absolute;inset:0;background:#0B1B33;font-family:'ASD',sans-serif;color:#fff;overflow:hidden}
+.t{position:absolute;left:110px;right:110px;font-weight:900;letter-spacing:-3px;line-height:1.15}
+.y{display:inline-block;background:#FFD400;color:#0B1B33;border-radius:18px;padding:4px 26px}
+.sub{font-weight:700;color:#C9D6E8;line-height:1.45}
+.brand{position:absolute;left:110px;top:190px;font-size:34px;font-weight:800;color:#7FD6B0}</style>
+<div id="root" data-composition-id="s3" data-width="1080" data-height="1920">
+<div class="t" style="top:330px;font-size:90px">기간만 늘렸을 뿐인데</div><div id="s3-a" style="position:absolute;left:110px;right:110px;top:480px;height:230px;background:#14305A;border-radius:28px;padding:36px 44px"><div class="sub" style="font-size:42px">36개월</div><div style="font-size:92px;font-weight:900;letter-spacing:-3px">월 약 62.7만원</div></div><div id="s3-b" style="position:absolute;left:110px;right:110px;top:750px;height:230px;background:#14305A;border-radius:28px;padding:36px 44px"><div class="sub" style="font-size:42px">60개월</div><div style="font-size:92px;font-weight:900;letter-spacing:-3px">월 약 40.6만원</div></div><div id="s3-c" class="t" style="top:1050px;font-size:112px"><span class="y">이자 +177만원</span></div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+tl.fromTo('#s3-a',{opacity:0,y:60},{opacity:1,y:0,duration:0.35,ease:'power3.out'},0.3);
+tl.fromTo('#s3-b',{opacity:0,y:60},{opacity:1,y:0,duration:0.35,ease:'power3.out'},1.0);
+tl.fromTo('#s3-c',{scale:0.6,opacity:0,transformOrigin:'0% 50%'},{scale:1,opacity:1,duration:0.3,ease:'back.out(2)'},2.2);
+window.__timelines["s3"] = tl;
+</script>
+</template>

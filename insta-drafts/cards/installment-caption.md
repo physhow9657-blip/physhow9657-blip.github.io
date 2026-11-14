@@ -3,6 +3,7 @@
 - 이미지: `insta-drafts/cards/installment/01~05.png`
 - 연결 글: https://physhow9657-blip.github.io/posts/used-car-installment-interest-calc/
 - 제휴 링크 없음 → 대가성 문구 불필요
+- 게시 상태: **재게시 완료** (2026-11-14, @magic.jiny, 5장 4:5, 아래 캡션 그대로). 첫 게시(밋밋한 v1, `installment/`)는 삭제하고 새 디자인 v2(`installment-v2/`, 네이비+노랑 강조, STEP 라벨, 막대 비교)로 교체
 
 ## 캡션
 

@@ -1,0 +1,27 @@
+<template>
+<style>@font-face{font-family:'ASD';src:local('Apple SD Gothic Neo');font-weight:100 900}#root{position:absolute;inset:0;background:#0B1B33;font-family:'ASD',sans-serif;color:#fff;overflow:hidden}
+.t{position:absolute;left:110px;right:110px;font-weight:900;letter-spacing:-3px;line-height:1.15}
+.y{display:inline-block;background:#FFD400;color:#0B1B33;border-radius:18px;padding:4px 26px}
+.sub{font-weight:700;color:#C9D6E8;line-height:1.45}
+.brand{position:absolute;left:110px;top:190px;font-size:34px;font-weight:800;color:#7FD6B0}</style>
+<div id="root" data-composition-id="s2" data-width="1080" data-height="1920">
+<div class="t" style="top:330px;font-size:82px">같은 2,000만원인데<br><span class="y">총이자</span>는?</div><div class="t" style="top:540px;font-size:46px;letter-spacing:-1px;display:flex;justify-content:space-between"><span class="sub">연 8% · 36개월</span><span id="s2-n0" style="color:#7FD6B0">0만원</span></div>
+<div id="s2-b0" style="position:absolute;left:110px;top:620px;height:84px;width:210px;background:#7FD6B0;border-radius:16px;transform-origin:0 50%"></div>
+<div class="t" style="top:780px;font-size:46px;letter-spacing:-1px;display:flex;justify-content:space-between"><span class="sub">연 8% · 60개월</span><span id="s2-n1" style="color:#FFD400">0만원</span></div>
+<div id="s2-b1" style="position:absolute;left:110px;top:860px;height:84px;width:356px;background:#FFD400;border-radius:16px;transform-origin:0 50%"></div>
+<div class="t" style="top:1020px;font-size:46px;letter-spacing:-1px;display:flex;justify-content:space-between"><span class="sub">연 18% · 60개월</span><span id="s2-n2" style="color:#FF5C5C">0만원</span></div>
+<div id="s2-b2" style="position:absolute;left:110px;top:1100px;height:84px;width:860px;background:#FF5C5C;border-radius:16px;transform-origin:0 50%"></div>
+<div class="t sub" style="top:1200px;font-size:34px;font-weight:600">선수금 0원 · 원리금균등 · 비교용 가정값</div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+const vals=[256,433,1047];
+vals.forEach((v,i)=>{
+  const st=0.5+i*1.1;
+  tl.fromTo('#s2-b'+i,{scaleX:0},{scaleX:1,duration:0.8,ease:'power3.out'},st);
+  const o={n:0};
+  tl.to(o,{n:v,duration:0.8,ease:'power3.out',onUpdate:()=>{document.getElementById('s2-n'+i).textContent=Math.round(o.n).toLocaleString('en-US')+'만원'}},st);
+});
+window.__timelines["s2"] = tl;
+</script>
+</template>
