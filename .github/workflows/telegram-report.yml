@@ -1,0 +1,40 @@
+name: Telegram report
+
+on:
+  push:
+    branches: [main]
+    paths: ['docs/daily-report.md']
+  workflow_dispatch:
+    inputs:
+      test:
+        description: '테스트 메시지만 보내기(true)'
+        default: 'false'
+
+permissions:
+  contents: read
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 보고서 최신 항목을 텔레그램으로 전송
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TEST: ${{ github.event.inputs.test }}
+        run: |
+          if [ -z "$TELEGRAM_BOT_TOKEN" ] || [ -z "$TELEGRAM_CHAT_ID" ]; then
+            echo "TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID 시크릿이 없습니다."; exit 1
+          fi
+          if [ "$TEST" = "true" ] || [ ! -f docs/daily-report.md ]; then
+            MSG="AutoCost Lab 보고서 연결 테스트입니다. 이 메시지가 보이면 설정이 정상입니다."
+          else
+            # 맨 위 항목(첫 번째 '## ' 제목부터 다음 '## ' 전까지)만 보냄, 텔레그램 한도(4096자) 안으로 자름
+            MSG=$(awk '/^## /{n++} n==1' docs/daily-report.md | head -c 3500)
+            [ -z "$MSG" ] && MSG=$(head -c 3500 docs/daily-report.md)
+          fi
+          curl -sS --fail -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" \
+            --data-urlencode "text=${MSG}" > /dev/null
+          echo "전송 완료"
