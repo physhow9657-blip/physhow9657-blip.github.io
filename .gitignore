@@ -23,3 +23,7 @@ Thumbs.db
 .vscode/*
 !.vscode/extensions.json
 .idea/
+
+# 릴스 원본 mp4는 커밋하지 않음(용량). 인스타 업로드용만 남긴다: 파일명 *-upload.mp4
+insta-drafts/reels/*.mp4
+!insta-drafts/reels/*-upload.mp4
