@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { config } from '../config';
+import { withBase } from '../lib/url';
+
+const ld = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  name: `${config.name} 소개`,
+  inLanguage: 'ko-KR',
+  mainEntity: {
+    '@type': 'Person',
+    name: config.author.name,
+    jobTitle: config.author.role,
+    description: config.author.bio,
+  },
+};
+---
+
+<BaseLayout title="소개 · 운영자" description={`${config.name}를 만드는 사람과 글을 쓰는 기준, 데이터 출처를 밝힙니다.`} jsonLd={ld}>
+  <header class="page-head">
+    <div class="container">
+      <h1>소개</h1>
+      <p>누가, 무엇을 근거로 쓰는 블로그인지 먼저 밝힙니다.</p>
+    </div>
+  </header>
+
+  <div class="container section">
+    <div class="prose">
+      <h2>운영자</h2>
+      <p>
+        <strong>{config.author.name}</strong> — {config.author.role} ({config.author.location})
+      </p>
+      <p>{config.author.bio}</p>
+      <ul>
+        {config.author.credentials.map((item) => <li>{item}</li>)}
+      </ul>
+
+      <h2>이 블로그가 다루는 것</h2>
+      <p>
+        차를 사고 유지하는 데 실제로 돈이 나가는 지점을 계산합니다. 등록비·세금·보험료·소모품·정비비처럼
+        계약 전에 알 수 있는 숫자를 중심으로 정리합니다. 특정 차량을 깎아내리거나 특정 판매처를 추천하는
+        글은 쓰지 않습니다.
+      </p>
+
+      <h2>숫자의 출처</h2>
+      <ul>
+        <li>법령·조례: 지방세법, 지방세특례제한법, 도시철도법 시행령 및 각 지자체 조례(차량등록사업소 공고)</li>
+        <li>실측: 직접 계약·등록·정비한 기록, 정비소 견적서, 보험사 견적 화면</li>
+        <li>시세: 공개된 중고차 시세와 부품 가격(작성 시점 명시)</li>
+      </ul>
+      <p>
+        모든 글은 작성일과 기준일을 표시하고, 제도가 바뀌면 수정 이력을 남깁니다. 세율·보험료는 사람과
+        지역에 따라 달라지므로, 계산 결과는 <strong>예산을 잡기 위한 추정치</strong>로만 사용하세요.
+      </p>
+
+      <h2>광고와 제휴</h2>
+      <p>
+        이 사이트는 구글 애드센스 광고와 제휴 마케팅(쿠팡 파트너스 등)으로 운영됩니다. 제휴 링크가 있는
+        글에는 대가성 문구를 본문에 표시합니다. 광고비를 받았다는 이유로 특정 제품을 실제보다 좋게
+        평가하지 않습니다.
+      </p>
+
+      <h2>연락</h2>
+      <p>
+        오류 제보, 자료 요청, 제휴 문의는 <a href={withBase('/contact/')}>문의 페이지</a> 또는
+        <a href={`mailto:${config.contact.email}`}>{config.contact.email}</a> 로 보내주세요.
+        {config.contact.responseTime}에 답변드립니다.
+      </p>
+
+      <hr />
+      <p style="font-size:0.875rem;color:var(--muted);">
+        본 사이트의 내용은 일반 정보 제공 목적이며 세무·법률·보험 자문이 아닙니다. 개별 계약과 신고는
+        관할 기관·전문가의 확인을 받으세요.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

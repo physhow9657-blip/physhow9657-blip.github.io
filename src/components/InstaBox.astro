@@ -1,0 +1,22 @@
+---
+/**
+ * 인스타 유입자에게 "저장/팔로우" 대신 "DM 키워드"를 한 번 더 안내하는 박스.
+ * (릴스에서 이미 키워드를 봤지만 블로그로 넘어오며 잊는 경우가 많습니다.)
+ */
+import { config } from '../config';
+
+interface Props {
+  keyword?: string;
+}
+
+const { keyword = config.instagram.defaultKeyword } = Astro.props;
+---
+
+<aside class="insta-box">
+  <p class="insta-box__text">
+    <strong>릴스에서 오셨나요?</strong>
+    인스타 <a href={config.instagram.url} rel="noopener" target="_blank">{config.instagram.handle}</a> 에서
+    댓글에 <strong>‘{keyword}’</strong>을 남기면 이 글의 요약표를 DM으로 보내드립니다.
+  </p>
+  <a class="btn btn--sm" href={config.instagram.url} rel="noopener" target="_blank">인스타에서 보기</a>
+</aside>

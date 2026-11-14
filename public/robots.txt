@@ -1,0 +1,19 @@
+# robots.txt — AutoCost Lab
+# 도메인을 바꾸면 아래 Sitemap 주소도 함께 바꾸세요.
+# (GitHub Pages 하위 경로 배포 시: Sitemap: https://<아이디>.github.io/<저장소>/sitemap-index.xml)
+
+User-agent: *
+Allow: /
+
+# 구글 애드센스 크롤러(광고 게재·정책 심사용) — 반드시 허용해야 합니다.
+User-agent: Mediapartners-Google
+Allow: /
+
+# 이미지·검색 결과 미리보기용
+User-agent: Googlebot-Image
+Allow: /
+
+# 관리용 경로가 생기면 여기서 막으세요.
+# Disallow: /admin/
+
+Sitemap: https://physhow9657-blip.github.io/sitemap-index.xml

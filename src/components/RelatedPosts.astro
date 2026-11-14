@@ -1,0 +1,48 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { config } from '../config';
+import { withBase } from '../lib/url';
+import { postUrl } from '../lib/url';
+
+interface Props {
+  current: CollectionEntry<'posts'>;
+  posts: CollectionEntry<'posts'>[];
+}
+
+const { current, posts } = Astro.props;
+
+// 같은 카테고리 → 공통 태그 많은 순 → 최신순
+const scored = posts
+  .filter((post) => post.id !== current.id)
+  .map((post) => {
+    const sharedTags = post.data.tags.filter((tag) => current.data.tags.includes(tag)).length;
+    const sameCategory = post.data.category === current.data.category ? 1 : 0;
+    return { post, score: sameCategory * 10 + sharedTags };
+  })
+  .sort((a, b) => b.score - a.score || b.post.data.pubDate.valueOf() - a.post.data.pubDate.valueOf())
+  .slice(0, 3);
+
+const calculator = withBase(config.tools.carTaxCalculator);
+---
+
+{
+  scored.length > 0 && (
+    <section class="related" aria-labelledby="related-title">
+      <h2 id="related-title">이어서 읽으면 좋은 글</h2>
+      <ul style="list-style:none;padding:0;margin:0;display:grid;gap:0.6rem;">
+        {scored.map(({ post }) => (
+          <li>
+            <a href={postUrl(post.id)} style="font-weight:600;">
+              {post.data.title}
+            </a>
+          </li>
+        ))}
+        <li>
+          <a href={calculator} style="font-weight:600;">
+            중고차 취등록세·이전등록 비용 계산기 (무료)
+          </a>
+        </li>
+      </ul>
+    </section>
+  )
+}

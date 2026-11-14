@@ -1,0 +1,31 @@
+---
+import type { MarkdownHeading } from 'astro';
+
+interface Props {
+  headings: MarkdownHeading[];
+  sticky?: boolean;
+}
+
+const { headings, sticky = false } = Astro.props;
+
+// h2, h3 만 목차에 노출 (h4 이하는 본문 흐름을 방해)
+const items = headings.filter((heading) => heading.depth === 2 || heading.depth === 3);
+const hasH3 = items.some((heading) => heading.depth === 3);
+---
+
+{
+  items.length > 2 && (
+    <nav class={sticky ? 'toc toc--sticky' : 'toc'} aria-label="목차">
+      <details open={!sticky}>
+        <summary>목차 {hasH3 ? '(소제목 포함)' : ''}</summary>
+        <ol>
+          {items.map((heading) => (
+            <li class={heading.depth === 3 ? 'toc__level-3' : undefined}>
+              <a href={`#${heading.slug}`}>{heading.text}</a>
+            </li>
+          ))}
+        </ol>
+      </details>
+    </nav>
+  )
+}

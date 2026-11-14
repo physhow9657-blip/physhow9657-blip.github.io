@@ -1,0 +1,30 @@
+---
+/**
+ * 계산기 CTA 박스 (본문 중간·하단).
+ * 제휴 카드는 AffiliateBox.astro 가 따로 담당합니다.
+ */
+import { config } from '../config';
+import { withBase } from '../lib/url';
+
+interface Props {
+  title?: string;
+  description?: string;
+  buttonLabel?: string;
+  path?: string;
+}
+
+const {
+  title = '계약 전에 총비용부터 확인하세요',
+  description = '차량 가격만 보고 계약하면 등록비·보험료에서 예산이 새어 나갑니다. 30초면 계산됩니다.',
+  buttonLabel = '취등록세 계산기 열기',
+  path = config.tools.carTaxCalculator,
+} = Astro.props;
+---
+
+<aside class="cta-box">
+  <p class="cta-box__title">{title}</p>
+  <p>{description}</p>
+  <div class="cta-box__actions">
+    <a class="btn btn--primary" href={withBase(path)}>{buttonLabel}</a>
+  </div>
+</aside>

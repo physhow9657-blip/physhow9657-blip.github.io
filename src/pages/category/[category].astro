@@ -1,0 +1,49 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostCard from '../../components/PostCard.astro';
+import { config } from '../../config';
+import { CATEGORIES } from '../../lib/categories';
+import { withBase } from '../../lib/url';
+
+export async function getStaticPaths() {
+  return CATEGORIES.map((category) => ({
+    params: { category: category.slug },
+    props: { category },
+  }));
+}
+
+const { category } = Astro.props;
+const posts = (
+  await getCollection('posts', ({ data }) =>
+    data.category === category.id && (import.meta.env.PROD ? !data.draft : true)
+  )
+).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<BaseLayout
+  title={`${category.label} 글 모음`}
+  description={`${category.description} ${config.name}에서 ${category.label} 주제로 정리한 글 ${posts.length}편.`}
+>
+  <header class="page-head">
+    <div class="container">
+      <p class="breadcrumb" style="margin-bottom:0.6rem;">
+        <a href={withBase('/posts/')}>전체 글</a>
+      </p>
+      <h1>{category.label}</h1>
+      <p>{category.description}</p>
+    </div>
+  </header>
+
+  <div class="container section">
+    {
+      posts.length === 0 ? (
+        <p class="empty">이 주제의 글을 준비 중입니다.</p>
+      ) : (
+        <div class="grid grid--2">
+          {posts.map((post) => <PostCard post={post} showCategory={false} />)}
+        </div>
+      )
+    }
+  </div>
+</BaseLayout>

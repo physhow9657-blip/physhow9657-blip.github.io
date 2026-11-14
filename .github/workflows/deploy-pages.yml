@@ -1,0 +1,53 @@
+name: Deploy to GitHub Pages
+
+# main 브랜치에 push 하면 자동으로 빌드해서 GitHub Pages 에 배포합니다.
+# 최초 1회: 저장소 → Settings → Pages → Source 를 "GitHub Actions" 로 선택하세요.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build with Astro
+        uses: withastro/action@v3
+        with:
+          # 프로젝트가 저장소 루트에 있으면 '.' (하위 폴더면 예: 'projects/car-adsense-blog')
+          path: .
+          node-version: 22
+        env:
+          # 사용자 페이지(physhow9657-blip.github.io 저장소) → 루트 주소로 배포합니다.
+          SITE_URL: https://${{ github.repository_owner }}.github.io
+          BASE_PATH: /
+          # ─────────────────────────────────────────────────────────────
+          # 다른 저장소 이름으로 '프로젝트 페이지'에 배포한다면 아래처럼 바꾸세요.
+          #   BASE_PATH: /${{ github.event.repository.name }}
+          # 커스텀 도메인을 연결했다면 SITE_URL 만 실제 도메인으로 바꾸고
+          # BASE_PATH 는 '/' 로 두면 됩니다.
+          # ─────────────────────────────────────────────────────────────
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,25 @@
+# 빌드 산출물
+dist/
+.astro/
+
+# 의존성
+node_modules/
+
+# 로그·임시파일
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.DS_Store
+Thumbs.db
+*.log
+
+# 로컬 환경변수 (.env 는 절대 커밋하지 않습니다)
+.env
+.env.*
+!.env.example
+
+# 에디터
+.vscode/*
+!.vscode/extensions.json
+.idea/

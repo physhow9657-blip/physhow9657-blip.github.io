@@ -1,0 +1,83 @@
+---
+/**
+ * 제휴·CPA 전환 카드.
+ *
+ * ■ 쓰는 곳
+ *   - 블로그 글 상단 : <AffiliateBox placement="top" />
+ *   - 본문 중간      : <AffiliateBox placement="mid" title="..." items={[...]} />
+ *   - 글 하단        : <AffiliateBox placement="bottom" />
+ *   - 계산기·소개 페이지 등 아무 .astro 파일에서나
+ *
+ * ■ 동작
+ *   - config.showAffiliates 가 false 이면 아무것도 그리지 않습니다.
+ *     (애드센스 승인 전 '제휴 도배' 거절 방지용 스위치)
+ *   - config.affiliates 의 항목 중 url 이 비어 있으면 그 카드는 자동으로 빠집니다.
+ *   - 대가성 문구(공정위 심사지침)는 기본으로 항상 표시됩니다.
+ *
+ * ■ 법적 표기
+ *   대한민국에서 대가를 받고 하는 추천·보증은 '경제적 이해관계'를 밝혀야 합니다.
+ *   문구는 config.affiliates.disclosure 한 곳에서만 관리하세요.
+ */
+import { config } from '../config';
+
+interface AffiliateItem {
+  label: string;
+  url: string;
+  note?: string;
+}
+
+interface Props {
+  placement?: 'top' | 'mid' | 'bottom';
+  title?: string;
+  body?: string;
+  /** 지정하면 config 대신 이 목록을 사용합니다(차량별 맞춤 링크 등) */
+  items?: AffiliateItem[];
+  /** 기본 true. false 로 끄면 대가성 문구가 사라지므로 권장하지 않습니다. */
+  showDisclosure?: boolean;
+  /** 좁은 카드 형태 */
+  compact?: boolean;
+}
+
+const {
+  placement = 'mid',
+  title = '이 글과 함께 많이 확인하는 것',
+  body,
+  items,
+  showDisclosure = true,
+  compact = false,
+} = Astro.props;
+
+const configured: AffiliateItem[] = [
+  config.affiliates.coupang,
+  config.affiliates.aliexpress,
+  config.affiliates.rental,
+  config.affiliates.digital,
+].map((item) => ({ label: item.label, url: item.url, note: item.note }));
+
+const source: AffiliateItem[] = items && items.length > 0 ? items : configured;
+const list = source.filter((item) => item && typeof item.url === 'string' && item.url.trim().length > 0);
+
+const visible = config.showAffiliates && list.length > 0;
+---
+
+{
+  visible && (
+    <aside class:list={['affiliate', `affiliate--${placement}`, { 'affiliate--compact': compact }]} aria-label="제휴 안내">
+      <p class="affiliate__eyebrow">제휴 · 추천</p>
+      <p class="affiliate__title">{title}</p>
+      {body && <p class="affiliate__body">{body}</p>}
+      <ul class="affiliate__list">
+        {list.map((item) => (
+          <li class="affiliate__item">
+            <a class="affiliate__link" href={item.url} target="_blank" rel="sponsored nofollow noopener">
+              <span class="affiliate__label">{item.label}</span>
+              <span class="affiliate__arrow" aria-hidden="true">→</span>
+            </a>
+            {item.note && <span class="affiliate__note">{item.note}</span>}
+          </li>
+        ))}
+      </ul>
+      {showDisclosure && <p class="affiliate__disclosure">{config.affiliates.disclosure}</p>}
+    </aside>
+  )
+}

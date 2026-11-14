@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="AutoCost Lab">
+  <rect width="64" height="64" rx="16" fill="#0d3f67"/>
+  <path d="M14 40h36" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.35"/>
+  <path d="M17 34l5-11a6 6 0 0 1 5.5-3.6h9A6 6 0 0 1 42 23l5 11" fill="none" stroke="#ffffff" stroke-width="4" stroke-linejoin="round"/>
+  <rect x="15" y="34" width="34" height="10" rx="4" fill="#ffffff"/>
+  <circle cx="23" cy="45" r="4" fill="#d94f04"/>
+  <circle cx="41" cy="45" r="4" fill="#d94f04"/>
+</svg>

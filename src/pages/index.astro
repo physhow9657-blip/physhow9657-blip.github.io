@@ -1,0 +1,112 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostCard from '../components/PostCard.astro';
+import CtaBox from '../components/CtaBox.astro';
+import InstaBox from '../components/InstaBox.astro';
+import AffiliateBox from '../components/AffiliateBox.astro';
+import { config } from '../config';
+import { CATEGORIES } from '../lib/categories';
+import { withBase, categoryUrl } from '../lib/url';
+
+const all = await getCollection('posts', ({ data }) => (import.meta.env.PROD ? !data.draft : true));
+const posts = all.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const featured = posts.filter((post) => post.data.featured);
+const latest = (featured.length > 0 ? featured : posts).slice(0, 3);
+const rest = posts.filter((post) => !latest.includes(post)).slice(0, 3);
+
+const calculator = withBase(config.tools.carTaxCalculator);
+---
+
+<BaseLayout
+  title={`${config.name} — ${config.tagline}`}
+  description={config.description}
+  isHome
+>
+  <section class="hero">
+    <div class="container">
+      <span class="hero__eyebrow">중고차 · 수입차 · 바이크 실구매 데이터</span>
+      <h1>차 살 때,<br />감으로 결정하지 마세요</h1>
+      <p class="hero__lead">
+        취등록세부터 3년 유지비까지. 실제 계약서와 정비 견적으로 계산한 숫자만 정리합니다.
+        영업 말고 계산으로 고르는 블로그.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href={calculator}>취등록세 계산기 (무료)</a>
+        <a class="btn" href={withBase('/posts/')}>글 전체 보기</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2>최근 글</h2>
+        <a class="section__more" href={withBase('/posts/')}>전체 보기 →</a>
+      </div>
+
+      {
+        latest.length > 0 ? (
+          <div class="grid grid--3">
+            {latest.map((post) => <PostCard post={post} />)}
+          </div>
+        ) : (
+          <p class="empty">첫 글을 발행하면 여기에 표시됩니다.</p>
+        )
+      }
+
+      {
+        rest.length > 0 && (
+          <div class="grid grid--3" style="margin-top:1rem;">
+            {rest.map((post) => <PostCard post={post} />)}
+          </div>
+        )
+      }
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2>무료 계산기</h2>
+      </div>
+      <a class="card" href={calculator} style="display:block;">
+        <div class="card__meta"><span class="badge badge--accent">도구</span><span>가입 없이 바로</span></div>
+        <h3 class="card__title">중고차 취등록세 · 이전등록 총비용 계산기</h3>
+        <p class="card__desc">
+          차량가·배기량·지역만 넣으면 취득세 7%, 경차 75만원 공제, 전기차 140만원 감면,
+          공채 할인, 등록면허세까지 한 번에 나옵니다.
+        </p>
+      </a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2>주제별로 보기</h2>
+      </div>
+      <div class="grid grid--3">
+        {
+          CATEGORIES.map((category) => (
+            <a class="card" href={categoryUrl(category.slug)}>
+              <h3 class="card__title">{category.label}</h3>
+              <p class="card__desc">{category.description}</p>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <InstaBox />
+      <CtaBox
+        title="계약서에 도장 찍기 전, 30초만 투자하세요"
+        description="등록비를 모르고 계약하면 예산이 100만원 이상 어긋납니다. 계산기는 무료이고 저장되지 않습니다."
+      />
+      <AffiliateBox placement="bottom" title="이번 달 독자가 많이 본 준비물" compact />
+    </div>
+  </section>
+</BaseLayout>

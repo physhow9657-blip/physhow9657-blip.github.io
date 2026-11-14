@@ -1,0 +1,28 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getCategory } from '../lib/categories';
+import { postUrl } from '../lib/url';
+
+interface Props {
+  post: CollectionEntry<'posts'>;
+  showCategory?: boolean;
+}
+
+const { post, showCategory = true } = Astro.props;
+const category = getCategory(post.data.category);
+
+const dateText = post.data.pubDate.toLocaleDateString('ko-KR', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<a class="card" href={postUrl(post.id)}>
+  <div class="card__meta">
+    {showCategory && <span class="badge">{category.label}</span>}
+    <time datetime={post.data.pubDate.toISOString()}>{dateText}</time>
+  </div>
+  <h3 class="card__title">{post.data.title}</h3>
+  <p class="card__desc">{post.data.description}</p>
+</a>

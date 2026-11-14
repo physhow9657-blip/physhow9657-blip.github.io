@@ -1,0 +1,59 @@
+---
+/**
+ * 애드센스 광고 슬롯.
+ *
+ * - `src/config.ts` 의 adsense.enabled 가 false 이면 실제 광고 스크립트를 전혀 넣지 않습니다.
+ *   (승인 전 빈 광고 요청은 정책 위반이 될 수 있어 기본값은 꺼짐)
+ * - 개발 모드에서는 레이아웃 확인용 점선 박스를 보여 주고, 실제 배포 화면에서는 아무것도 그리지 않습니다.
+ * - 승인 후: config.adsense.enabled = true, client/slots 를 실제 값으로 교체하면 그대로 동작합니다.
+ */
+import { config } from '../config';
+
+interface Props {
+  slot: 'top' | 'mid' | 'bottom' | string;
+  label?: string;
+}
+
+const { slot, label = '광고' } = Astro.props;
+
+const clientOk = /^ca-pub-\d{16}$/.test(config.adsense.client);
+const slots: Record<string, string> = {
+  top: config.adsense.slots.top,
+  mid: config.adsense.slots.mid,
+  bottom: config.adsense.slots.bottom,
+};
+const slotId = slots[slot] ?? '';
+const showAd = config.adsense.enabled && clientOk && /^\d{6,}$/.test(slotId);
+const showPlaceholder = !showAd && import.meta.env.DEV;
+---
+
+{
+  showAd && (
+    <aside class="ad-slot" aria-label={label}>
+      <span class="ad-slot__label">{label}</span>
+      <ins
+        class="adsbygoogle"
+        style="display:block"
+        data-ad-client={config.adsense.client}
+        data-ad-slot={slotId}
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      ></ins>
+      <script is:inline>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </aside>
+  )
+}
+
+{
+  showPlaceholder && (
+    <aside class="ad-slot" aria-hidden="true">
+      <div class="ad-placeholder">
+        광고 영역 ({slot})
+        <br />
+        승인 후 src/config.ts → adsense.enabled = true
+      </div>
+    </aside>
+  )
+}
