@@ -57,7 +57,7 @@ export const config = {
    * ⚠️ 공개 주소입니다. 개인 메일 대신 전용 주소를 만드는 것을 권장합니다.
    *    도메인을 사면 contact@내도메인 으로 무료 포워딩을 걸 수 있습니다. */
   contact: {
-    email: 'contact@autocostlab.com',
+    email: 'physhow9657@gmail.com',
     responseTime: '영업일 기준 2일 이내',
     // 광고·제휴 문의를 따로 받고 싶을 때 (없으면 빈 문자열)
     businessEmail: '',
