@@ -1,0 +1,32 @@
+<template>
+<style>@font-face{font-family:'ASD';src:local('Apple SD Gothic Neo');font-weight:100 900}#root{position:absolute;inset:0;background:#0B1B33;font-family:'ASD',sans-serif;color:#fff;overflow:hidden}.t{position:absolute;left:140px;right:200px;font-weight:900;letter-spacing:-3px;line-height:1.15}.y{display:inline-block;background:#FFD400;color:#0B1B33;border-radius:18px;padding:4px 26px}.tag{position:absolute;left:140px;top:330px;font-size:36px;font-weight:800;color:#7FD6B0;letter-spacing:-1px}
+.b{position:absolute;max-width:760px;border-radius:44px;padding:34px 44px;font-size:58px;font-weight:800;letter-spacing:-2px;line-height:1.3}
+.rep{left:140px;background:#fff;color:#0B1B33;border-bottom-left-radius:10px}
+.cus{right:200px;background:#FFD400;color:#0B1B33;border-bottom-right-radius:10px;text-align:right}
+.who{position:absolute;font-size:30px;font-weight:800;color:#C9D6E8}
+.panel{position:absolute;left:140px;right:200px;top:1240px;height:230px;border-radius:36px;background:#13294B;border:4px solid #FF5C5C;display:flex;flex-direction:column;align-items:center;justify-content:center}
+</style>
+<div id="root" data-composition-id="n2" data-width="1080" data-height="1920">
+<div class="tag" style="top:280px">자동차 대리점에서</div>
+<div class="who" id="n2-w1" style="left:130px;top:350px">영업사원</div>
+<div class="b rep" id="n2-b1" style="top:400px">고객님, 월 얼마까지 보세요?</div>
+<div class="who" id="n2-w2" style="right:130px;top:590px">나</div>
+<div class="b cus" id="n2-b2" style="top:640px">음... 한 50만원이요?</div>
+<div class="who" id="n2-w3" style="left:130px;top:800px">영업사원</div>
+<div class="b rep" id="n2-b3" style="top:850px">그럼 60개월로 맞춰 드릴게요! 월 50만원대 됩니다!</div>
+<div class="panel" id="n2-p"><div style="font-size:40px;font-weight:700;color:#C9D6E8">내가 낼 총이자</div><div id="n2-n" style="font-size:130px;font-weight:900;color:#FF5C5C;letter-spacing:-3px;white-space:nowrap">0만원</div></div>
+</div>
+<script>
+const tl=gsap.timeline({paused:true});
+const pop=(s,t)=>tl.from(s,{scale:0.7,opacity:0,duration:0.3,ease:'back.out(2)',transformOrigin:'50% 100%'},t);
+tl.from('.tag',{opacity:0,duration:0.3},0);
+['#n2-w1','#n2-b1'].forEach(s=>pop(s,0.3));
+['#n2-w2','#n2-b2'].forEach(s=>pop(s,2.9));
+['#n2-w3','#n2-b3'].forEach(s=>pop(s,6.0));
+tl.from('#n2-p',{y:80,opacity:0,duration:0.4,ease:'power3.out'},6.4);
+const o={n:0};
+tl.to(o,{n:1047,duration:3.3,ease:'power2.in',onUpdate:()=>{document.getElementById('n2-n').textContent=Math.round(o.n).toLocaleString('en-US')+'만원'}},6.6);
+tl.to('#n2-p',{x:6,duration:0.05,yoyo:true,repeat:5},9.9);
+window.__timelines["n2"]=tl;
+</script>
+</template>

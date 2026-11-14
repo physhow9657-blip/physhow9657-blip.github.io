@@ -805,25 +805,9 @@
   "craft": {
     "ok": true,
     "errorCount": 0,
-    "warningCount": 1,
+    "warningCount": 0,
     "infoCount": 0,
-    "findings": [
-      {
-        "code": "film_silent",
-        "severity": "warning",
-        "message": "This 26 s film has no sound source (no <audio>, no <video> with sound): add a music bed and sounds on the visible actions unless the person asked for silence; see references/sound.md.",
-        "selector": "[data-composition-id]",
-        "dataAttributes": {},
-        "sourceFile": "index.html",
-        "bbox": {
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0
-        },
-        "time": 0
-      }
-    ],
+    "findings": [],
     "enabled": true,
     "step": 0.125,
     "samples": 208
@@ -832,24 +816,8 @@
     "ok": true,
     "errorCount": 0,
     "warningCount": 0,
-    "infoCount": 1,
-    "findings": [
-      {
-        "code": "audio_none",
-        "severity": "info",
-        "message": "The film has no sound: no clip in it plays audio.",
-        "selector": "[data-composition-id]",
-        "dataAttributes": {},
-        "sourceFile": "index.html",
-        "bbox": {
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0
-        },
-        "time": 0
-      }
-    ]
+    "infoCount": 0,
+    "findings": []
   },
   "hdr": {
     "autoPromotion": null,

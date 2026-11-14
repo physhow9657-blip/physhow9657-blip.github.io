@@ -1,0 +1,30 @@
+<template>
+<style>@font-face{font-family:'ASD';src:local('Apple SD Gothic Neo');font-weight:100 900}#root{position:absolute;inset:0;background:#0B1B33;font-family:'ASD',sans-serif;color:#fff;overflow:hidden}.t{position:absolute;left:140px;right:200px;font-weight:900;letter-spacing:-3px;line-height:1.15}.y{display:inline-block;background:#FFD400;color:#0B1B33;border-radius:18px;padding:4px 26px}.tag{position:absolute;left:140px;top:260px;font-size:36px;font-weight:800;color:#7FD6B0;letter-spacing:-1px}
+.lab{position:absolute;left:140px;font-size:44px;font-weight:700;color:#C9D6E8;letter-spacing:-1px}
+.val{position:absolute;right:200px;font-size:52px;font-weight:900}
+.bar{position:absolute;left:140px;height:80px;border-radius:16px;transform-origin:0 50%}
+</style>
+<div id="root" data-composition-id="n3" data-width="1080" data-height="1920">
+<div class="t" style="top:300px;font-size:76px">같은 차, 같은 60개월</div>
+<div class="lab" style="top:480px">연 18% (영업사원 제안)</div><div class="val" id="n3-v0" style="top:470px;color:#FF5C5C">1,047만원</div>
+<div class="bar" id="n3-b0" style="top:550px;width:800px;background:#FF5C5C"></div>
+<div class="lab" style="top:700px">연 8% (금리 비교한 사람)</div><div class="val" id="n3-v1" style="top:690px;color:#FFD400">433만원</div>
+<div class="bar" id="n3-b1" style="top:770px;width:330px;background:#FFD400"></div>
+<div class="t" id="n3-d" style="top:900px;font-size:110px;white-space:nowrap">차이 <span class="y">614만원</span></div>
+<div class="t" id="n3-c1" style="top:1060px;font-size:58px;letter-spacing:-2px">견적 받을 땐 월 납입금 말고</div>
+<div class="t" id="n3-c2" style="top:1150px;font-size:66px;color:#FFD400">총이자부터 물어보세요</div>
+<div class="t" id="n3-c3" style="top:1290px;font-size:36px;font-weight:700;color:#7FD6B0;letter-spacing:-1px">저장해두고 견적 받을 때 써먹기</div>
+</div>
+<script>
+const tl=gsap.timeline({paused:true});
+tl.fromTo('#n3-b0',{scaleX:0},{scaleX:1,duration:0.6,ease:'power3.out'},0.3);
+tl.from('#n3-v0',{opacity:0,duration:0.3},0.6);
+tl.fromTo('#n3-b1',{scaleX:0},{scaleX:1,duration:0.6,ease:'power3.out'},2.2);
+tl.from('#n3-v1',{opacity:0,duration:0.3},2.9);
+tl.from('#n3-d',{scale:1.8,opacity:0,duration:0.35,ease:'power4.out',transformOrigin:'0 50%'},4.8);
+tl.from('#n3-c1',{y:30,opacity:0,duration:0.4},6.6);
+tl.from('#n3-c2',{y:30,opacity:0,duration:0.4},8.5);
+tl.from('#n3-c3',{opacity:0,duration:0.4},9.8);
+window.__timelines["n3"]=tl;
+</script>
+</template>

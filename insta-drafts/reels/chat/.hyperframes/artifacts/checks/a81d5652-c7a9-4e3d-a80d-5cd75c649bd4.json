@@ -208,21 +208,21 @@
           "x": 110,
           "y": 1019,
           "width": 537.05,
-          "height": 65
+          "height": 149.09
         },
         "time": 1.444,
         "rect": {
           "left": 110,
           "top": 1019,
           "right": 647.05,
-          "bottom": 1084,
+          "bottom": 1168.09,
           "width": 537.05,
-          "height": 65
+          "height": 149.09
         },
         "code": "outside_safe_zone",
         "severity": "warning",
-        "text": "월 납입금만 보면 놓쳐요",
-        "message": "<div> \"월 납입금만 보면 놓쳐요\" is outside the safe area: TikTok (left edge).",
+        "text": "연 18% · 60개월 기준월 납입금만 보면 놓쳐요",
+        "message": "<div> \"연 18% · 60개월 기준월 납입금만 보면 놓쳐요\" is outside the safe area: TikTok (left edge).",
         "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
         "firstSeen": 1.444,
         "lastSeen": 1.444,
@@ -805,25 +805,9 @@
   "craft": {
     "ok": true,
     "errorCount": 0,
-    "warningCount": 1,
+    "warningCount": 0,
     "infoCount": 0,
-    "findings": [
-      {
-        "code": "film_silent",
-        "severity": "warning",
-        "message": "This 26 s film has no sound source (no <audio>, no <video> with sound): add a music bed and sounds on the visible actions unless the person asked for silence; see references/sound.md.",
-        "selector": "[data-composition-id]",
-        "dataAttributes": {},
-        "sourceFile": "index.html",
-        "bbox": {
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0
-        },
-        "time": 0
-      }
-    ],
+    "findings": [],
     "enabled": true,
     "step": 0.125,
     "samples": 208
@@ -832,24 +816,8 @@
     "ok": true,
     "errorCount": 0,
     "warningCount": 0,
-    "infoCount": 1,
-    "findings": [
-      {
-        "code": "audio_none",
-        "severity": "info",
-        "message": "The film has no sound: no clip in it plays audio.",
-        "selector": "[data-composition-id]",
-        "dataAttributes": {},
-        "sourceFile": "index.html",
-        "bbox": {
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0
-        },
-        "time": 0
-      }
-    ]
+    "infoCount": 0,
+    "findings": []
   },
   "hdr": {
     "autoPromotion": null,

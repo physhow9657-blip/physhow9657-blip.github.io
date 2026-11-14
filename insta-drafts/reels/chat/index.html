@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="UTF-8"/><meta name="viewport" content="width=1080, height=1920"/>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+<style>*{margin:0;padding:0;box-sizing:border-box}html,body{margin:0;width:1080px;height:1920px;overflow:hidden;background:#0B1B33}</style></head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="27.6" data-width="1080" data-height="1920">
+<div id="n1" class="clip" data-composition-id="n1" data-composition-src="compositions/n1.html" data-start="0" data-duration="6.5" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+<div id="n2" class="clip" data-composition-id="n2" data-composition-src="compositions/n2.html" data-start="6.5" data-duration="10.1" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+<div id="n3" class="clip" data-composition-id="n3" data-composition-src="compositions/n3.html" data-start="16.6" data-duration="11.0" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+<audio id="a1" data-start="0.2" data-duration="5.88" data-track-index="2" src="assets/voice/hook.mp3"></audio>
+<audio id="a2" data-start="6.7" data-duration="2.43" data-track-index="3" src="assets/voice/rep1.mp3"></audio>
+<audio id="a3" data-start="9.4" data-duration="3.0" data-track-index="4" src="assets/voice/cust.mp3"></audio>
+<audio id="a5" data-start="16.9" data-duration="10.16" data-track-index="6" src="assets/voice/end.mp3"></audio>
+<audio id="mix" data-start="0" data-duration="27.6" data-track-index="7" src="assets/mix.mp3" data-volume="1"></audio>
+<audio id="a4" data-start="12.7" data-duration="3.87" data-track-index="5" src="assets/voice/rep2.mp3"></audio>
+</div>
+<script>const tl=gsap.timeline({paused:true});window.__timelines["main"]=tl;tl.seek(0);</script>
+</body></html>

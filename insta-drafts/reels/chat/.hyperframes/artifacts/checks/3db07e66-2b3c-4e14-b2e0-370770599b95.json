@@ -1,0 +1,1334 @@
+{
+  "ok": false,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": false,
+    "errorCount": 5,
+    "warningCount": 5,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "font_family_without_font_face",
+        "severity": "error",
+        "message": "Font family used without @font-face declaration: apple sd gothic neo. These are not in the auto-resolved font list, so the renderer cannot supply them automatically. Text will fall back to a generic font, producing incorrect typography in the video.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "/Users/danielsmacbook/physhow9657-blip.github.io/insta-drafts/reels/installment/compositions/s1.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add @font-face { font-family: '...'; src: url('capture/assets/fonts/...woff2'); } for each font family, pointing to the captured .woff2 files, or switch to a Google Fonts family. An OS font such as PingFang SC or Hiragino Sans renders locally from the installed copy, but a cloud render has no copy and refuses it."
+      },
+      {
+        "code": "font_face_local_only",
+        "severity": "warning",
+        "message": "@font-face 'asd' only names a font installed on this machine (src: local()). A local render uses the installed copy; a cloud render or another machine has none and falls back to a different font.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "/Users/danielsmacbook/physhow9657-blip.github.io/insta-drafts/reels/installment/compositions/s1.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add a url() source to the font file (.woff2) inside the project, or use a Google Fonts family, so every render draws the same glyphs."
+      },
+      {
+        "code": "font_family_without_font_face",
+        "severity": "error",
+        "message": "Font family used without @font-face declaration: apple sd gothic neo. These are not in the auto-resolved font list, so the renderer cannot supply them automatically. Text will fall back to a generic font, producing incorrect typography in the video.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "/Users/danielsmacbook/physhow9657-blip.github.io/insta-drafts/reels/installment/compositions/s2.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add @font-face { font-family: '...'; src: url('capture/assets/fonts/...woff2'); } for each font family, pointing to the captured .woff2 files, or switch to a Google Fonts family. An OS font such as PingFang SC or Hiragino Sans renders locally from the installed copy, but a cloud render has no copy and refuses it."
+      },
+      {
+        "code": "font_face_local_only",
+        "severity": "warning",
+        "message": "@font-face 'asd' only names a font installed on this machine (src: local()). A local render uses the installed copy; a cloud render or another machine has none and falls back to a different font.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "/Users/danielsmacbook/physhow9657-blip.github.io/insta-drafts/reels/installment/compositions/s2.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add a url() source to the font file (.woff2) inside the project, or use a Google Fonts family, so every render draws the same glyphs."
+      },
+      {
+        "code": "font_family_without_font_face",
+        "severity": "error",
+        "message": "Font family used without @font-face declaration: apple sd gothic neo. These are not in the auto-resolved font list, so the renderer cannot supply them automatically. Text will fall back to a generic font, producing incorrect typography in the video.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "/Users/danielsmacbook/physhow9657-blip.github.io/insta-drafts/reels/installment/compositions/s3.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add @font-face { font-family: '...'; src: url('capture/assets/fonts/...woff2'); } for each font family, pointing to the captured .woff2 files, or switch to a Google Fonts family. An OS font such as PingFang SC or Hiragino Sans renders locally from the installed copy, but a cloud render has no copy and refuses it."
+      },
+      {
+        "code": "font_face_local_only",
+        "severity": "warning",
+        "message": "@font-face 'asd' only names a font installed on this machine (src: local()). A local render uses the installed copy; a cloud render or another machine has none and falls back to a different font.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "/Users/danielsmacbook/physhow9657-blip.github.io/insta-drafts/reels/installment/compositions/s3.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add a url() source to the font file (.woff2) inside the project, or use a Google Fonts family, so every render draws the same glyphs."
+      },
+      {
+        "code": "font_family_without_font_face",
+        "severity": "error",
+        "message": "Font family used without @font-face declaration: apple sd gothic neo. These are not in the auto-resolved font list, so the renderer cannot supply them automatically. Text will fall back to a generic font, producing incorrect typography in the video.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "/Users/danielsmacbook/physhow9657-blip.github.io/insta-drafts/reels/installment/compositions/s4.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add @font-face { font-family: '...'; src: url('capture/assets/fonts/...woff2'); } for each font family, pointing to the captured .woff2 files, or switch to a Google Fonts family. An OS font such as PingFang SC or Hiragino Sans renders locally from the installed copy, but a cloud render has no copy and refuses it."
+      },
+      {
+        "code": "font_face_local_only",
+        "severity": "warning",
+        "message": "@font-face 'asd' only names a font installed on this machine (src: local()). A local render uses the installed copy; a cloud render or another machine has none and falls back to a different font.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "/Users/danielsmacbook/physhow9657-blip.github.io/insta-drafts/reels/installment/compositions/s4.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add a url() source to the font file (.woff2) inside the project, or use a Google Fonts family, so every render draws the same glyphs."
+      },
+      {
+        "code": "font_family_without_font_face",
+        "severity": "error",
+        "message": "Font family used without @font-face declaration: apple sd gothic neo. These are not in the auto-resolved font list, so the renderer cannot supply them automatically. Text will fall back to a generic font, producing incorrect typography in the video.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "/Users/danielsmacbook/physhow9657-blip.github.io/insta-drafts/reels/installment/compositions/s5.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add @font-face { font-family: '...'; src: url('capture/assets/fonts/...woff2'); } for each font family, pointing to the captured .woff2 files, or switch to a Google Fonts family. An OS font such as PingFang SC or Hiragino Sans renders locally from the installed copy, but a cloud render has no copy and refuses it."
+      },
+      {
+        "code": "font_face_local_only",
+        "severity": "warning",
+        "message": "@font-face 'asd' only names a font installed on this machine (src: local()). A local render uses the installed copy; a cloud render or another machine has none and falls back to a different font.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "/Users/danielsmacbook/physhow9657-blip.github.io/insta-drafts/reels/installment/compositions/s5.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add a url() source to the font file (.woff2) inside the project, or use a Google Fonts family, so every render draws the same glyphs."
+      }
+    ],
+    "filesScanned": 6
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 32,
+    "infoCount": 0,
+    "findings": [
+      {
+        "selector": "#s1 > div:nth-of-type(1) > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s1.html",
+        "bbox": {
+          "x": 72,
+          "y": 190,
+          "width": 192.89,
+          "height": 41
+        },
+        "time": 1.444,
+        "rect": {
+          "left": 72,
+          "top": 190,
+          "right": 264.89,
+          "bottom": 231,
+          "width": 192.89,
+          "height": 41
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "AutoCost Lab",
+        "message": "<div> \"AutoCost Lab\" is outside the safe area: TikTok (top edge), Instagram Reels (top edge), YouTube Shorts (top edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 1.444,
+        "lastSeen": 1.444,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          1.444
+        ]
+      },
+      {
+        "selector": "#s1-a",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s1.html",
+        "bbox": {
+          "x": 72,
+          "y": 296,
+          "width": 670.2,
+          "height": 180
+        },
+        "time": 1.444,
+        "rect": {
+          "left": 72,
+          "top": 296,
+          "right": 742.2,
+          "bottom": 476,
+          "width": 670.2,
+          "height": 180
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "중고차 할부",
+        "message": "<div> \"중고차 할부\" is outside the safe area: TikTok (left edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 1.444,
+        "lastSeen": 1.444,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          1.444
+        ]
+      },
+      {
+        "selector": "#s1-b",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s1.html",
+        "bbox": {
+          "x": 72,
+          "y": 475,
+          "width": 846.61,
+          "height": 240
+        },
+        "time": 1.444,
+        "rect": {
+          "left": 72,
+          "top": 475,
+          "right": 918.61,
+          "bottom": 715,
+          "width": 846.61,
+          "height": 240
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "2,000만원",
+        "message": "<div> \"2,000만원\" is outside the safe area: TikTok (left edge), YouTube Shorts (right edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 1.444,
+        "lastSeen": 1.444,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          1.444
+        ]
+      },
+      {
+        "selector": "#s1-c",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s1.html",
+        "bbox": {
+          "x": 98,
+          "y": 761,
+          "width": 817.03,
+          "height": 141
+        },
+        "time": 1.444,
+        "rect": {
+          "left": 98,
+          "top": 761,
+          "right": 915.03,
+          "bottom": 902,
+          "width": 817.03,
+          "height": 141
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "이자만 1,047만원?",
+        "message": "<div> \"이자만 1,047만원?\" is outside the safe area: TikTok (left and right edges), YouTube Shorts (right edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 1.444,
+        "lastSeen": 1.444,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          1.444
+        ]
+      },
+      {
+        "selector": "#s1-d",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s1.html",
+        "bbox": {
+          "x": 72,
+          "y": 1017,
+          "width": 534.47,
+          "height": 69
+        },
+        "time": 1.444,
+        "rect": {
+          "left": 72,
+          "top": 1017,
+          "right": 606.47,
+          "bottom": 1086,
+          "width": 534.47,
+          "height": 69
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "월 납입금만 보면 놓쳐요",
+        "message": "<div> \"월 납입금만 보면 놓쳐요\" is outside the safe area: TikTok (left edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 1.444,
+        "lastSeen": 1.444,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          1.444
+        ]
+      },
+      {
+        "selector": "#s2 > div:nth-of-type(1) > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s2.html",
+        "bbox": {
+          "x": 72,
+          "y": 190,
+          "width": 192.89,
+          "height": 41
+        },
+        "time": 4.333,
+        "rect": {
+          "left": 72,
+          "top": 190,
+          "right": 264.89,
+          "bottom": 231,
+          "width": 192.89,
+          "height": 41
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "AutoCost Lab",
+        "message": "<div> \"AutoCost Lab\" is outside the safe area: TikTok (top edge), Instagram Reels (top edge), YouTube Shorts (top edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 4.333,
+        "lastSeen": 7.222,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          4.333,
+          7.222
+        ]
+      },
+      {
+        "selector": "#s2 > div:nth-of-type(1) > div:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s2.html",
+        "bbox": {
+          "x": 72,
+          "y": 257,
+          "width": 625.02,
+          "height": 197.3
+        },
+        "time": 4.333,
+        "rect": {
+          "left": 72,
+          "top": 257,
+          "right": 697.02,
+          "bottom": 454.3,
+          "width": 625.02,
+          "height": 197.3
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "같은 2,000만원인데는? 총이자",
+        "message": "<div> \"같은 2,000만원인데는? 총이자\" is outside the safe area: TikTok (left edge), Instagram Reels (top edge), YouTube Shorts (top edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 4.333,
+        "lastSeen": 7.222,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          4.333,
+          7.222
+        ]
+      },
+      {
+        "selector": "#s2 > div:nth-of-type(1) > div:nth-of-type(3) > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s2.html",
+        "bbox": {
+          "x": 72,
+          "y": 545,
+          "width": 272.33,
+          "height": 55
+        },
+        "time": 4.333,
+        "rect": {
+          "left": 72,
+          "top": 545,
+          "right": 344.33,
+          "bottom": 600,
+          "width": 272.33,
+          "height": 55
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "연 8% · 36개월",
+        "message": "<span> \"연 8% · 36개월\" is outside the safe area: TikTok (left edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 4.333,
+        "lastSeen": 7.222,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          4.333,
+          7.222
+        ]
+      },
+      {
+        "selector": "#s2-n0",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s2.html",
+        "bbox": {
+          "x": 902.44,
+          "y": 538,
+          "width": 105.56,
+          "height": 55
+        },
+        "time": 4.333,
+        "rect": {
+          "left": 902.44,
+          "top": 538,
+          "right": 1008,
+          "bottom": 593,
+          "width": 105.56,
+          "height": 55
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "0만원",
+        "message": "<span> \"0만원\" is outside the safe area: TikTok (right edge), YouTube Shorts (right edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 4.333,
+        "lastSeen": 7.222,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          4.333,
+          7.222
+        ]
+      },
+      {
+        "selector": "#s2 > div:nth-of-type(1) > div:nth-of-type(5) > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s2.html",
+        "bbox": {
+          "x": 72,
+          "y": 785,
+          "width": 276.42,
+          "height": 55
+        },
+        "time": 4.333,
+        "rect": {
+          "left": 72,
+          "top": 785,
+          "right": 348.42,
+          "bottom": 840,
+          "width": 276.42,
+          "height": 55
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "연 8% · 60개월",
+        "message": "<span> \"연 8% · 60개월\" is outside the safe area: TikTok (left edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 4.333,
+        "lastSeen": 7.222,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          4.333,
+          7.222
+        ]
+      },
+      {
+        "selector": "#s2-n1",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s2.html",
+        "bbox": {
+          "x": 902.44,
+          "y": 778,
+          "width": 105.56,
+          "height": 55
+        },
+        "time": 4.333,
+        "rect": {
+          "left": 902.44,
+          "top": 778,
+          "right": 1008,
+          "bottom": 833,
+          "width": 105.56,
+          "height": 55
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "0만원",
+        "message": "<span> \"0만원\" is outside the safe area: TikTok (right edge), YouTube Shorts (right edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 4.333,
+        "lastSeen": 7.222,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          4.333,
+          7.222
+        ]
+      },
+      {
+        "selector": "#s2 > div:nth-of-type(1) > div:nth-of-type(7) > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s2.html",
+        "bbox": {
+          "x": 72,
+          "y": 1025,
+          "width": 291.84,
+          "height": 55
+        },
+        "time": 4.333,
+        "rect": {
+          "left": 72,
+          "top": 1025,
+          "right": 363.84,
+          "bottom": 1080,
+          "width": 291.84,
+          "height": 55
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "연 18% · 60개월",
+        "message": "<span> \"연 18% · 60개월\" is outside the safe area: TikTok (left edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 4.333,
+        "lastSeen": 7.222,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          4.333,
+          7.222
+        ]
+      },
+      {
+        "selector": "#s2-n2",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s2.html",
+        "bbox": {
+          "x": 902.44,
+          "y": 1018,
+          "width": 105.56,
+          "height": 55
+        },
+        "time": 4.333,
+        "rect": {
+          "left": 902.44,
+          "top": 1018,
+          "right": 1008,
+          "bottom": 1073,
+          "width": 105.56,
+          "height": 55
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "0만원",
+        "message": "<span> \"0만원\" is outside the safe area: TikTok (right edge), YouTube Shorts (right edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 4.333,
+        "lastSeen": 7.222,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          4.333,
+          7.222
+        ]
+      },
+      {
+        "selector": "#s2 > div:nth-of-type(1) > div:nth-of-type(9)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s2.html",
+        "bbox": {
+          "x": 72,
+          "y": 1264,
+          "width": 464.83,
+          "height": 41
+        },
+        "time": 4.333,
+        "rect": {
+          "left": 72,
+          "top": 1264,
+          "right": 536.83,
+          "bottom": 1305,
+          "width": 464.83,
+          "height": 41
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "선수금 0원 · 원리금균등 · 비교용 가정값",
+        "message": "<div> \"선수금 0원 · 원리금균등 · 비교용 가정값\" is outside the safe area: TikTok (bottom edge), Instagram Reels (bottom edge), YouTube Shorts (bottom edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 4.333,
+        "lastSeen": 7.222,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          4.333,
+          7.222
+        ]
+      },
+      {
+        "selector": "#s3 > div:nth-of-type(1) > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s3.html",
+        "bbox": {
+          "x": 72,
+          "y": 190,
+          "width": 192.89,
+          "height": 41
+        },
+        "time": 10.111,
+        "rect": {
+          "left": 72,
+          "top": 190,
+          "right": 264.89,
+          "bottom": 231,
+          "width": 192.89,
+          "height": 41
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "AutoCost Lab",
+        "message": "<div> \"AutoCost Lab\" is outside the safe area: TikTok (top edge), Instagram Reels (top edge), YouTube Shorts (top edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 10.111,
+        "lastSeen": 13,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          10.111,
+          13
+        ]
+      },
+      {
+        "selector": "#s3 > div:nth-of-type(1) > div:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s3.html",
+        "bbox": {
+          "x": 72,
+          "y": 257,
+          "width": 715,
+          "height": 108
+        },
+        "time": 10.111,
+        "rect": {
+          "left": 72,
+          "top": 257,
+          "right": 787,
+          "bottom": 365,
+          "width": 715,
+          "height": 108
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "기간만 늘렸을 뿐인데",
+        "message": "<div> \"기간만 늘렸을 뿐인데\" is outside the safe area: TikTok (left edge), Instagram Reels (top edge), YouTube Shorts (top edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 10.111,
+        "lastSeen": 13,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          10.111,
+          13
+        ]
+      },
+      {
+        "selector": "#s3-a > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s3.html",
+        "bbox": {
+          "x": 116,
+          "y": 520,
+          "width": 118.45,
+          "height": 51
+        },
+        "time": 13,
+        "rect": {
+          "left": 116,
+          "top": 520,
+          "right": 234.45,
+          "bottom": 571,
+          "width": 118.45,
+          "height": 51
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "36개월",
+        "message": "<div> \"36개월\" is outside the safe area: TikTok (left edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 13,
+        "lastSeen": 13,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          13
+        ]
+      },
+      {
+        "selector": "#s3-a > div:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s3.html",
+        "bbox": {
+          "x": 116,
+          "y": 576.89,
+          "width": 501.58,
+          "height": 111
+        },
+        "time": 13,
+        "rect": {
+          "left": 116,
+          "top": 576.89,
+          "right": 617.58,
+          "bottom": 687.89,
+          "width": 501.58,
+          "height": 111
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "월 약 62.7만원",
+        "message": "<div> \"월 약 62.7만원\" is outside the safe area: TikTok (left edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 13,
+        "lastSeen": 13,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          13
+        ]
+      },
+      {
+        "selector": "#s3-b > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s3.html",
+        "bbox": {
+          "x": 116,
+          "y": 790,
+          "width": 122.19,
+          "height": 51
+        },
+        "time": 13,
+        "rect": {
+          "left": 116,
+          "top": 790,
+          "right": 238.19,
+          "bottom": 841,
+          "width": 122.19,
+          "height": 51
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "60개월",
+        "message": "<div> \"60개월\" is outside the safe area: TikTok (left edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 13,
+        "lastSeen": 13,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          13
+        ]
+      },
+      {
+        "selector": "#s3-b > div:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s3.html",
+        "bbox": {
+          "x": 116,
+          "y": 846.89,
+          "width": 517.5,
+          "height": 111
+        },
+        "time": 13,
+        "rect": {
+          "left": 116,
+          "top": 846.89,
+          "right": 633.5,
+          "bottom": 957.89,
+          "width": 517.5,
+          "height": 111
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "월 약 40.6만원",
+        "message": "<div> \"월 약 40.6만원\" is outside the safe area: TikTok (left edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 13,
+        "lastSeen": 13,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          13
+        ]
+      },
+      {
+        "selector": "#s3-c",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s3.html",
+        "bbox": {
+          "x": 98,
+          "y": 1050,
+          "width": 601.78,
+          "height": 135
+        },
+        "time": 13,
+        "rect": {
+          "left": 98,
+          "top": 1050,
+          "right": 699.78,
+          "bottom": 1185,
+          "width": 601.78,
+          "height": 135
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "이자 +177만원",
+        "message": "<div> \"이자 +177만원\" is outside the safe area: TikTok (left edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 13,
+        "lastSeen": 13,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          13
+        ]
+      },
+      {
+        "selector": "#s4 > div:nth-of-type(1) > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s4.html",
+        "bbox": {
+          "x": 72,
+          "y": 190,
+          "width": 192.89,
+          "height": 41
+        },
+        "time": 15.889,
+        "rect": {
+          "left": 72,
+          "top": 190,
+          "right": 264.89,
+          "bottom": 231,
+          "width": 192.89,
+          "height": 41
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "AutoCost Lab",
+        "message": "<div> \"AutoCost Lab\" is outside the safe area: TikTok (top edge), Instagram Reels (top edge), YouTube Shorts (top edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 15.889,
+        "lastSeen": 18.778,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          15.889,
+          18.778
+        ]
+      },
+      {
+        "selector": "#s4 > div:nth-of-type(1) > div:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s4.html",
+        "bbox": {
+          "x": 72,
+          "y": 297,
+          "width": 636.2,
+          "height": 235
+        },
+        "time": 15.889,
+        "rect": {
+          "left": 72,
+          "top": 297,
+          "right": 708.2,
+          "bottom": 532,
+          "width": 636.2,
+          "height": 235
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "금리 8% → 18%같은 60개월인데",
+        "message": "<div> \"금리 8% → 18%같은 60개월인데\" is outside the safe area: TikTok (left edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 15.889,
+        "lastSeen": 18.778,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          15.889,
+          18.778
+        ]
+      },
+      {
+        "selector": "#s4-n",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s4.html",
+        "bbox": {
+          "x": 72,
+          "y": 633,
+          "width": 902.25,
+          "height": 300
+        },
+        "time": 15.889,
+        "rect": {
+          "left": 72,
+          "top": 633,
+          "right": 974.25,
+          "bottom": 933,
+          "width": 902.25,
+          "height": 300
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "+547만원",
+        "message": "<div> \"+547만원\" is outside the safe area: TikTok (left and right edges), YouTube Shorts (right edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 15.889,
+        "lastSeen": 18.778,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          15.889,
+          18.778
+        ]
+      },
+      {
+        "selector": "#s4-s",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s4.html",
+        "bbox": {
+          "x": 72,
+          "y": 986,
+          "width": 594.77,
+          "height": 143.3
+        },
+        "time": 18.778,
+        "rect": {
+          "left": 72,
+          "top": 986,
+          "right": 666.77,
+          "bottom": 1129.3,
+          "width": 594.77,
+          "height": 143.3
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "총이자 433만원 → 1,047만원금리 10%p 차이가 2배 넘게",
+        "message": "<div> \"총이자 433만원 → 1,047만원금리 10%p 차이가 2배 넘게\" is outside the safe area: TikTok (left edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 18.778,
+        "lastSeen": 18.778,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.778
+        ]
+      },
+      {
+        "selector": "#s5 > div:nth-of-type(1) > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s5.html",
+        "bbox": {
+          "x": 72,
+          "y": 190,
+          "width": 192.89,
+          "height": 41
+        },
+        "time": 21.667,
+        "rect": {
+          "left": 72,
+          "top": 190,
+          "right": 264.89,
+          "bottom": 231,
+          "width": 192.89,
+          "height": 41
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "AutoCost Lab",
+        "message": "<div> \"AutoCost Lab\" is outside the safe area: TikTok (top edge), Instagram Reels (top edge), YouTube Shorts (top edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 21.667,
+        "lastSeen": 24.556,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          21.667,
+          24.556
+        ]
+      },
+      {
+        "selector": "#s5 > div:nth-of-type(1) > div:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s5.html",
+        "bbox": {
+          "x": 72,
+          "y": 261,
+          "width": 554.5,
+          "height": 229.39
+        },
+        "time": 21.667,
+        "rect": {
+          "left": 72,
+          "top": 261,
+          "right": 626.5,
+          "bottom": 490.39,
+          "width": 554.5,
+          "height": 229.39
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "받으면이 3가지부터 견적서",
+        "message": "<div> \"받으면이 3가지부터 견적서\" is outside the safe area: TikTok (left edge), Instagram Reels (top edge), YouTube Shorts (top edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 21.667,
+        "lastSeen": 24.556,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          21.667,
+          24.556
+        ]
+      },
+      {
+        "selector": "#s5-i0 > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s5.html",
+        "bbox": {
+          "x": 112,
+          "y": 518.5,
+          "width": 17.58,
+          "height": 63
+        },
+        "time": 21.667,
+        "rect": {
+          "left": 112,
+          "top": 518.5,
+          "right": 129.58,
+          "bottom": 581.5,
+          "width": 17.58,
+          "height": 63
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "1",
+        "message": "<span> \"1\" is outside the safe area: TikTok (left edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 21.667,
+        "lastSeen": 24.556,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          21.667,
+          24.556
+        ]
+      },
+      {
+        "selector": "#s5-i1 > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s5.html",
+        "bbox": {
+          "x": 112,
+          "y": 688.5,
+          "width": 26.72,
+          "height": 63
+        },
+        "time": 21.667,
+        "rect": {
+          "left": 112,
+          "top": 688.5,
+          "right": 138.72,
+          "bottom": 751.5,
+          "width": 26.72,
+          "height": 63
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "2",
+        "message": "<span> \"2\" is outside the safe area: TikTok (left edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 21.667,
+        "lastSeen": 24.556,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          21.667,
+          24.556
+        ]
+      },
+      {
+        "selector": "#s5-i2 > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s5.html",
+        "bbox": {
+          "x": 111.99,
+          "y": 858.5,
+          "width": 26.88,
+          "height": 63
+        },
+        "time": 21.667,
+        "rect": {
+          "left": 111.99,
+          "top": 858.5,
+          "right": 138.87,
+          "bottom": 921.5,
+          "width": 26.88,
+          "height": 63
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "3",
+        "message": "<span> \"3\" is outside the safe area: TikTok (left edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 21.667,
+        "lastSeen": 24.556,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          21.667,
+          24.556
+        ]
+      },
+      {
+        "selector": "#s5-c",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s5.html",
+        "bbox": {
+          "x": 116,
+          "y": 1059,
+          "width": 743.09,
+          "height": 63
+        },
+        "time": 24.556,
+        "rect": {
+          "left": 116,
+          "top": 1059,
+          "right": 859.09,
+          "bottom": 1122,
+          "width": 743.09,
+          "height": 63
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "저장해두고 견적 받을 때 꺼내 보세요",
+        "message": "<div> \"저장해두고 견적 받을 때 꺼내 보세요\" is outside the safe area: TikTok (left and right edges).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 24.556,
+        "lastSeen": 24.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          24.556
+        ]
+      },
+      {
+        "selector": "#s5-c > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s5.html",
+        "bbox": {
+          "x": 116,
+          "y": 1139.19,
+          "width": 391.56,
+          "height": 45
+        },
+        "time": 24.556,
+        "rect": {
+          "left": 116,
+          "top": 1139.19,
+          "right": 507.56,
+          "bottom": 1184.19,
+          "width": 391.56,
+          "height": 45
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "전체 계산표는 프로필 링크",
+        "message": "<div> \"전체 계산표는 프로필 링크\" is outside the safe area: TikTok (left edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 24.556,
+        "lastSeen": 24.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          24.556
+        ]
+      }
+    ],
+    "duration": 26,
+    "samples": [
+      1.444,
+      4.333,
+      7.222,
+      10.111,
+      13,
+      15.889,
+      18.778,
+      21.667,
+      24.556
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 32,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      1.444,
+      7.222,
+      13,
+      18.778,
+      24.556
+    ],
+    "checked": 36,
+    "passed": 36
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 1,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "film_silent",
+        "severity": "warning",
+        "message": "This 26 s film has no sound source (no <audio>, no <video> with sound): add a music bed and sounds on the visible actions unless the person asked for silence; see references/sound.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0
+      }
+    ],
+    "enabled": true,
+    "step": 0.125,
+    "samples": 208
+  },
+  "audio": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 1,
+    "findings": [
+      {
+        "code": "audio_none",
+        "severity": "info",
+        "message": "The film has no sound: no clip in it plays audio.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0
+      }
+    ]
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  }
+}
