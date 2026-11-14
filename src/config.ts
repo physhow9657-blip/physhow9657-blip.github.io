@@ -79,8 +79,8 @@ export const config = {
   /* 5. 인스타그램 ---------------------------------------------------------
    * 릴스 → 댓글 키워드 → 자동 DM → 이 블로그 글 → 애드센스/제휴 */
   instagram: {
-    handle: '@autocost.lab',
-    url: 'https://www.instagram.com/autocost.lab/',
+    handle: '@magic.jiny',
+    url: 'https://www.instagram.com/magic.jiny/',
     // 자동 DM 을 유발하는 기본 키워드 (글마다 frontmatter `instaKeyword` 로 덮어쓸 수 있음)
     defaultKeyword: '계산기',
     // DM 첫 문장에 넣을 안내 문구
