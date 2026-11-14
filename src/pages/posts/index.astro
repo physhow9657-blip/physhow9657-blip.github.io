@@ -1,12 +1,13 @@
 ---
 import { getCollection } from 'astro:content';
+import { isPublished } from '../../lib/published';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostCard from '../../components/PostCard.astro';
 import { config } from '../../config';
 import { CATEGORIES } from '../../lib/categories';
 import { withBase } from '../../lib/url';
 
-const posts = (await getCollection('posts', ({ data }) => (import.meta.env.PROD ? !data.draft : true))).sort(
+const posts = (await getCollection('posts', isPublished)).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 

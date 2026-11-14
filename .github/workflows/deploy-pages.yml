@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    # 매일 09:10 KST(00:10 UTC)에 다시 빌드해서 pubDate 가 지난 예약 글을 공개합니다.
+    - cron: '10 0 * * *'
 
 permissions:
   contents: read

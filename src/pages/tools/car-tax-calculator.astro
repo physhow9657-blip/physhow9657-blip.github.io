@@ -7,6 +7,7 @@ import { config } from '../../config';
 import { withBase } from '../../lib/url';
 import { calculateCarTax } from '../../lib/car-tax';
 import { getCollection } from 'astro:content';
+import { isPublished } from '../../lib/published';
 
 // 기본값(아반떼 1,598cc · 1,500만원 · 서울 이전)으로 서버에서 한 번 계산해 둡니다.
 // → 자바스크립트가 늦게 로드되어도 숫자가 바로 보이고, 검색엔진도 내용을 읽을 수 있습니다.
@@ -24,7 +25,7 @@ const initialResult = calculateCarTax({
 const krwFmt = new Intl.NumberFormat('ko-KR');
 
 const posts = (
-  await getCollection('posts', ({ data }) => (import.meta.env.PROD ? !data.draft : true))
+  await getCollection('posts', isPublished)
 )
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, 3);

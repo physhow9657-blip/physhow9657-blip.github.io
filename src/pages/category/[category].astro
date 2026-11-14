@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import { isPublished } from '../../lib/published';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostCard from '../../components/PostCard.astro';
 import { config } from '../../config';
@@ -15,8 +16,8 @@ export async function getStaticPaths() {
 
 const { category } = Astro.props;
 const posts = (
-  await getCollection('posts', ({ data }) =>
-    data.category === category.id && (import.meta.env.PROD ? !data.draft : true)
+  await getCollection('posts', (entry) =>
+    entry.data.category === category.id && isPublished(entry)
   )
 ).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---

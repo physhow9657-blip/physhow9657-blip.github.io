@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import { isPublished } from '../lib/published';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PostCard from '../components/PostCard.astro';
 import CtaBox from '../components/CtaBox.astro';
@@ -9,7 +10,7 @@ import { config } from '../config';
 import { CATEGORIES } from '../lib/categories';
 import { withBase, categoryUrl } from '../lib/url';
 
-const all = await getCollection('posts', ({ data }) => (import.meta.env.PROD ? !data.draft : true));
+const all = await getCollection('posts', isPublished);
 const posts = all.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const featured = posts.filter((post) => post.data.featured);
 const latest = (featured.length > 0 ? featured : posts).slice(0, 3);
