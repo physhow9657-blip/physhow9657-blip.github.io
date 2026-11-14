@@ -73,6 +73,14 @@ faq:
 | 워셔액 | 표기 어는점, 희석 비율, 용량 | 어는점이 낮은 제품일수록 냄새가 강한 경우가 있어 사용 후기 확인 |
 | 김서림 방지 | 도포 방식, 유리 틴팅 영향, 지속 기간 | 효과가 짧아 반복 구매 필요, 틴팅 필름에 맞지 않는 제품 주의 |
 
+## 쿠팡 자동차용품 카테고리 베스트
+
+> 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
+
+아래는 쿠팡이 자동으로 보여 주는 **자동차용품 카테고리 베스트**입니다. 제가 직접 써 보고 고른 제품이 아니며 추천이 아닙니다. 규격·어는점 같은 위 기준을 확인한 뒤 판단하세요.
+
+<iframe src="https://ads-partners.coupang.com/widgets.html?id=1050179&template=carousel&trackingCode=AF8748189&subId=&width=680&height=140&tsource=" width="680" height="140" frameborder="0" scrolling="no" referrerpolicy="unsafe-url"></iframe>
+
 <!-- 발행 전 필수: 실제 사용 경험 1건 이상(사진·주행 조건·사용 제품·단점)을 "직접 써본 기록" 섹션으로 추가할 것. 제품 링크는 src/config.ts 의 affiliates.coupang.url 이 채워지고 showAffiliates 가 true 가 된 뒤에만 노출된다. AI 초안 그대로 발행 금지(CLAUDE.md §2-4). 끝나면 draft: true 를 지운다. -->
 
 ## 함께 보면 좋은 글
