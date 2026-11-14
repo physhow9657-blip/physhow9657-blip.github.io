@@ -102,7 +102,7 @@ export const config = {
     // 쿠팡파트너스: 파트너스에서 발급한 '짧은 링크'를 넣으세요.
     coupang: {
       label: '쿠팡에서 차량·바이크 용품 최저가 보기',
-      url: '',
+      url: 'https://link.coupang.com/a/iFtxazd7Zc',
       note: '쿠팡파트너스 · 수수료 3% 내외',
     },
 
