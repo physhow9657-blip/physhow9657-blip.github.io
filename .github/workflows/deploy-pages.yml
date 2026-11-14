@@ -1,11 +1,13 @@
 name: Deploy to GitHub Pages
 
 # main 브랜치에 push 하면 자동으로 빌드해서 GitHub Pages 에 배포합니다.
-# 이 저장소는 사용자 페이지(physhow9657-blip.github.io)이므로 BASE_PATH 는 '/' 입니다.
 #
-# 최초 배포: 저장소에 push 만 하면 됩니다. Pages 가 아직 꺼져 있으면
+# 저장소 이름에 따라 배포 경로가 자동으로 정해집니다.
+#   - physhow9657-blip.github.io  → https://physhow9657-blip.github.io/        (BASE_PATH "/")
+#   - 그 밖의 이름(예: jin)        → https://physhow9657-blip.github.io/jin/   (BASE_PATH "/jin")
+#
+# 최초 배포: push 만 하면 됩니다. Pages 가 아직 꺼져 있으면
 # actions/configure-pages 의 enablement 옵션이 자동으로 켭니다.
-# (자동으로 켜지지 않는 환경이면 저장소 Settings → Pages → Source = GitHub Actions)
 
 on:
   push:
@@ -34,16 +36,25 @@ jobs:
           node-version: 22
           cache: npm
 
+      - name: Determine site URL and base path
+        run: |
+          SITE_URL="https://${GITHUB_REPOSITORY_OWNER}.github.io"
+          if [ "${GITHUB_EVENT_REPOSITORY_NAME}" = "${GITHUB_REPOSITORY_OWNER}.github.io" ]; then
+            BASE_PATH="/"
+          else
+            BASE_PATH="/${GITHUB_EVENT_REPOSITORY_NAME}"
+          fi
+          echo "SITE_URL=${SITE_URL}" >> "$GITHUB_ENV"
+          echo "BASE_PATH=${BASE_PATH}" >> "$GITHUB_ENV"
+          echo "SITE_URL=${SITE_URL} / BASE_PATH=${BASE_PATH}"
+        env:
+          GITHUB_EVENT_REPOSITORY_NAME: ${{ github.event.repository.name }}
+
       - name: Install dependencies
         run: npm ci
 
       - name: Build (Astro)
         run: npm run build
-        env:
-          # 사용자 페이지(루트 주소) 배포
-          SITE_URL: https://${{ github.repository_owner }}.github.io
-          BASE_PATH: /
-          # 프로젝트 페이지로 배포한다면 BASE_PATH: /${{ github.event.repository.name }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
