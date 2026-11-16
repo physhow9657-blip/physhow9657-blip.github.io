@@ -1,5 +1,15 @@
 # 일일 초안 보고서
 
+## 2026-11-16 (자동 실행)
+- **주제/파일**: 폐차·말소등록 자동차세 환급 계산 (키워드맵 #19) — `src/content/posts/scrap-car-tax-refund-guide.md` (draft: true)
+- **근거 출처**:
+  - 서울시 행정분야 누리집(연납 후 폐차·명의이전 시 일할 환급, 명의이전 환급 약 2개월): https://news.seoul.go.kr/gov/archives/200212?listPage=1
+  - 2차 해설(조문 인용 확인용, 원문 아님): https://korea.legal/wiki/%ec%a7%80%eb%b0%a9%ec%84%b8%eb%b2%95-%ec%a0%9c130%ec%a1%b0/ , https://korea.legal/wiki/%ec%a7%80%eb%b0%a9%ec%84%b8%eb%b2%95-%ec%8b%9c%ed%96%89%eb%a0%b9-%ec%a0%9c126%ec%a1%b0/
+- **확인 못 해 뺀/불확실한 내용**: 국가법령정보센터 지방세법 제128~130조·시행령 제126조 본문(추출 실패, 해설 자료마다 인용 조문이 다름), 폐차 환급 신청 절차·처리 기간, 환급 신청 기한(5년 주장 미확인), 2천원 미만 비징수가 환급에도 적용되는지, 지방교육세 환급 처리, 자동차보험 환급 금액(출처 없어 미기재).
+- **계산**: 1,998cc 연 399,600원(가정, 연납 공제·경감·교육세 제외) × 남은 92일 ÷ 365 = 100,721원, 184일은 201,442원 (python 검산).
+- **사람이 검토할 부분**: 시행령 제126조 일수 계산 방식 원문 대조 후 계산식 확정, 폐차 환급 절차 구청 확인, `used-car-tax-settlement-on-transfer`·`car-tax-prepayment-discount-calc` 글과의 내용 정합성(연납 공제율 정정 반영 여부).
+- **npm run build**: 성공 (24페이지, draft 글 제외)
+
 ## 2026-11-15 (4차 실행)
 - **주제/파일**: 내 차 리콜 대상 조회하는 법 (키워드맵 #18) — `src/content/posts/car-recall-lookup-guide.md` (draft: true)
 - **근거 출처**:
