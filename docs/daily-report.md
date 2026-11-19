@@ -1,5 +1,15 @@
 # 일일 초안 보고서
 
+## 2026-11-19 (자동 실행)
+- **주제/파일**: 자동차 명의이전 절차·서류·기한 (키워드맵 #16) — `src/content/posts/car-title-transfer-guide.md` (draft: true)
+- **근거 출처** (WebSearch 요약으로만 확인. 수원시 페이지 WebFetch는 본문 추출 실패, 법령 원문 미열람):
+  - 수원시 이전등록 안내: https://www.suwon.go.kr/web/deptHome/dep_traffic/traffic05/traffic05-01/swcar/pages/normal03.do
+  - 2차 해설(기한·서류): https://braindetox.kr/posts/vehicle_title_transfer_rules_guide.html , https://wikidocs.net/blog/@mythos/21335/ , https://www.bizforms.co.kr/guide/list/carsale/carsale004.asp , https://korea.legal/wiki/%eb%a7%a4%eb%a7%a4%ed%95%9c-%ec%9e%90%eb%8f%99%ec%b0%a8%ec%9d%98-%ec%9d%b4%ec%a0%84%eb%93%b1%eb%a1%9d-%ec%8b%a0%ec%b2%ad/
+- **확인 못 해 뺀/불확실한 내용**: 과태료 금액(수원시: 10일 이하 10만원·이후 1일 1만원·최고 50만원 vs 11일째부터 가산하는 자료, 기산 방식 상충 — 본문은 수원시 안내를 출처 표기로만 인용하고 확정 안 함), 증여 20일·상속 6개월 기한(법령 원문 미확인, '확인 필요' 표기), 양도증명서 서식 번호(별지 15·16호)와 인감증명서 면제 범위, 온라인 신청 방식(출처 상충), 수수료·채권 금액(미기재).
+- **사람이 검토할 부분**: 자동차등록령 제26조·자동차등록규칙 제33조 원문 대조, 과태료 금액 확정 후 본문 보완, 신청 방식 확인, 내부 링크 4개(car365, 2026-used-car-registration-tax-guide, used-car-tax-settlement-on-transfer, 계산기) 정합성.
+- **선택 경위**: 키워드맵 후보 중 미작성은 #16·#23뿐(이전 실행에서 수치 상충으로 보류). #16은 금액 확정 없이 기한·서류 중심으로 쓸 수 있어 선택. #23은 계속 보류.
+- **npm run build**: 성공 (27페이지, draft 글 제외)
+
 ## 2026-11-18 (자동 실행)
 - **주제/파일**: 전기차 취득세 감면 140만원 한도와 2027년 개편안 (키워드맵 #20) — `src/content/posts/ev-acquisition-tax-reduction-guide.md` (draft: true)
 - **근거 출처** (WebSearch 요약으로만 확인. 언론·정부 원문은 세션 네트워크에서 접속 불가):
